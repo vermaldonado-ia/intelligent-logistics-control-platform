@@ -21,16 +21,24 @@ Diseñar y desarrollar un prototipo funcional que simule la automatización de d
 En operaciones logísticas y de comercio exterior existen múltiples puntos críticos que impactan la continuidad y seguridad:
 
 - Validaciones manuales de acceso al puerto
+- Falta de control en el ingreso de camiones al recinto portuario
+- Ingreso de camiones no autorizados con riesgo de robo de carga
 - Procesos documentales lentos y propensos a errores
 - Falta de trazabilidad en eventos operacionales
-- Riesgo de robo de carga en carretera
-- Fatiga de conductores que puede afectar la seguridad
+- Robo de mercancía tanto en carretera como dentro del puerto
+- Riesgo de fatiga de conductores durante el traslado
+
+Adicionalmente, la operación logística está sujeta a restricciones de tiempo:
+
+- Los camiones deben cumplir ventanas de atención en el puerto
+- Si no se cumple el turno asignado, la carga puede quedar en piso
+- Existen multas por retraso en la operación
 
 Estos factores generan:
 
-- Retrasos operacionales  
-- Riesgos de seguridad  
-- Pérdidas económicas  
+- Pérdidas económicas por robos o multas  
+- Riesgos de seguridad operacional  
+- Retrasos en la cadena logística  
 - Baja eficiencia en la toma de decisiones  
 
 ---
@@ -43,8 +51,9 @@ Se propone una plataforma que automatiza la evaluación de una operación logís
 
 - ✅ Control de acceso portuario (conductor y camión)
 - ✅ Validación documental (simulación de procesos regulatorios)
-- ✅ Monitoreo de riesgo logístico (GPS)
+- ✅ Monitoreo de riesgo logístico (GPS – robo o desvío de carga)
 - ✅ Monitoreo de condiciones del conductor (fatiga)
+- ✅ Evaluación de cumplimiento de ventanas operacionales
 - ✅ Orquestación de resultados en una decisión consolidada
 
 ---
@@ -52,13 +61,15 @@ Se propone una plataforma que automatiza la evaluación de una operación logís
 ## ⚙️ Flujo de la Operación
 
 1. Se recibe una solicitud de operación logística
-2. Se valida el acceso del conductor y camión
-3. Se evalúa la documentación de la carga
-4. Se analizan eventos operacionales:
-   - Alerta GPS (movimiento no autorizado)
+2. El camión se presenta en el punto de control (simulación de tótem)
+3. Se valida el acceso del conductor y camión
+4. Se evalúa la documentación de la carga
+5. Se analizan eventos operacionales:
+   - Alerta GPS (posible robo o desvío)
    - Fatiga del conductor
-5. Se ejecuta el motor de decisiones
-6. Se entrega un resultado consolidado
+6. Se valida cumplimiento de ventana horaria
+7. Se ejecuta el motor de decisiones
+8. Se entrega un resultado consolidado
 
 ---
 
@@ -78,7 +89,7 @@ Se propone una plataforma que automatiza la evaluación de una operación logís
 | Condición | Resultado |
 |----------|--------|
 | Todo aprobado y sin alertas | ✅ Operación habilitada |
-| Existen observaciones o alertas | ⚠️ Operación con observaciones |
+| Existen alertas o desviaciones | ⚠️ Operación con observaciones |
 | Acceso o documentación rechazada | ❌ Operación bloqueada |
 
 ---
