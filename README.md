@@ -1,117 +1,47 @@
-# 🚀 Plataforma Inteligente de Control Logístico y Validación Operacional
+# 🚀 Intelligent Logistics Control Platform (MVP)
 
-> Simulación de solución tecnológica para automatizar procesos logísticos, validación documental y control de acceso en operaciones de transporte y comercio exterior.  
-> Enfocado en la integración de procesos operacionales, trazabilidad y reducción de riesgos logísticos.
+Simulación de una plataforma inteligente para el control logístico y validación operacional en procesos de transporte y comercio exterior.
+
+Este proyecto modela un flujo completo de validación y toma de decisiones, integrando:
+
+- Validación documental (con lógica de plazos y riesgo de eliminación)
+- Validación de acceso (conductor + camión)
+- Evaluación de eventos operacionales (GPS y fatiga)
+- Consolidación del estado de la operación
+- Notificación automática al teléfono del transportista
 
 ---
 
 ## 🎯 Objetivo
 
-Diseñar y desarrollar un prototipo funcional que simule la automatización de decisiones en procesos logísticos, integrando:
-
-- Validación documental en procesos de importación/exportación (simulación)
-- Control de acceso de conductores y camiones a recintos operacionales
-- Monitoreo de eventos de riesgo logístico (GPS y condiciones del conductor)
-- Orquestación de decisiones para determinar el estado de la operación
+Diseñar un MVP que represente cómo una organización logística puede automatizar decisiones críticas en el ingreso de mercancías a un recinto portuario, reduciendo riesgos operacionales y mejorando la trazabilidad del proceso.
 
 ---
 
 ## 🧩 Problema de Negocio
 
-En operaciones logísticas y de comercio exterior existen múltiples puntos críticos que impactan la continuidad y seguridad:
+En operaciones de comercio exterior existen múltiples puntos críticos:
 
-### 🔐 Seguridad
-- Ingreso de camiones no autorizados al recinto portuario  
-- Robo de mercancía en carretera y dentro del puerto  
-- Falta de control en accesos físicos  
+- Validaciones documentales manuales y lentas  
+- Observaciones o rechazos sin control de plazos  
+- Riesgo de eliminación de mercancía por incumplimiento documental  
+- Falta de control en el acceso de camiones y conductores  
+- Eventos operacionales no monitoreados (GPS, fatiga)  
+- Ausencia de comunicación automática hacia el transportista  
 
-### ⚙️ Operación
-- Procesos manuales de validación  
-- Falta de trazabilidad en eventos operacionales  
-- Sistemas no integrados  
-
-### ⏱️ Cumplimiento
-- Ventanas horarias estrictas en el puerto  
-- Multas por retraso en la atención  
-- Riesgo de que la carga quede en piso por incumplimiento de turno  
-
-Estos factores generan:
-
-- Pérdidas económicas por robos o multas  
-- Riesgos de seguridad operacional  
-- Retrasos en la cadena logística  
-- Baja eficiencia en la toma de decisiones  
+Este MVP simula una solución que orquesta estas validaciones y automatiza la decisión final.
 
 ---
 
-## 💡 Solución Propuesta
+## ⚙️ Flujo de la Solución
 
-Se propone una plataforma que automatiza la evaluación de una operación logística mediante un **motor de decisiones**, integrando distintas fuentes de validación:
-
-### Capacidades principales
-
-- ✅ Validación documental (simulación basada en criterios de entidades fiscalizadoras)  
-- ✅ Control de acceso portuario (conductor y camión)  
-- ✅ Monitoreo de riesgo logístico (GPS – robo o desvío de carga)  
-- ✅ Monitoreo de condiciones del conductor (fatiga)  
-- ✅ Evaluación de cumplimiento de ventanas operacionales  
-- ✅ Orquestación de resultados en una decisión consolidada  
+1. Validación documental  
+2. Validación de acceso (conductor + camión)  
+3. Evaluación de eventos operacionales  
+4. Consolidación del estado de la operación  
+5. Notificación automática al teléfono  
 
 ---
 
-## 🔄 Flujo General del Proceso
+## 🏗️ Arquitectura del MVP
 
-![Flujo Operacional](./diagrams/flujo_operacional_general.png)
-
-> La validación documental considera criterios generales de cumplimiento regulatorio definidos por entidades fiscalizadoras del ámbito de comercio exterior.
-
----
-
-## ⚙️ Flujo de la Operación
-
-1. Se recibe una solicitud de operación logística  
-2. Se realiza la validación documental de la carga  
-3. Si la documentación es conforme, el camión se presenta en el punto de control  
-4. Se valida el acceso del conductor y del camión  
-5. Se analizan eventos operacionales:  
-   - Alerta GPS (posible robo o desvío)  
-   - Fatiga del conductor  
-6. Se valida cumplimiento de ventana horaria  
-7. Se ejecuta el motor de decisiones  
-8. Se entrega un resultado consolidado  
-
----
-
-## 🧠 Lógica de Decisión
-
-### Resultado por módulo
-
-- Acceso: `APROBADO | OBSERVADO | RECHAZADO`  
-- Documentación: `APROBADO | OBSERVADO | RECHAZADO`  
-- GPS: `NORMAL | ALERTA`  
-- Fatiga: `NORMAL | ALERTA`  
-
----
-
-### Resultado consolidado
-
-| Condición | Resultado |
-|----------|--------|
-| Todo aprobado y sin alertas | ✅ Operación habilitada |
-| Existen alertas o desviaciones | ⚠️ Operación con observaciones |
-| Acceso o documentación rechazada | ❌ Operación bloqueada |
-
----
-
-## 🧪 Ejemplo de Input (simplificado)
-
-```json
-{
-  "conductor_autorizado": true,
-  "camion_autorizado": true,
-  "ventana_horaria_valida": true,
-  "documentos_completos": true,
-  "datos_consistentes": true,
-  "gps_alerta": false,
-  "fatiga_detectada": false
-}
