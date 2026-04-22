@@ -2,146 +2,193 @@
 
 Simulación de una plataforma inteligente para el control logístico y validación operacional en procesos de transporte y comercio exterior.
 
-Este proyecto modela un flujo completo de validación y toma de decisiones, integrando:
-
-* Validación documental (con lógica de plazos y riesgo de eliminación)
-* Validación de acceso (conductor + camión)
-* Evaluación de eventos operacionales (GPS y fatiga)
-* Consolidación del estado de la operación
-* Notificación automática al teléfono del transportista
+Este MVP modela un flujo realista desde la validación documental previa hasta el monitoreo de la carga en tránsito, integrando control operativo, gestión de riesgos y automatización de decisiones.
 
 ---
 
 ## 🎯 Objetivo
 
-Diseñar un MVP que represente cómo una organización logística puede automatizar decisiones críticas en el ingreso de mercancías a un recinto portuario, reduciendo riesgos operacionales y mejorando la trazabilidad del proceso.
+Automatizar el control de ingreso al puerto, salida de mercancía y monitoreo del transporte, reduciendo riesgos operacionales y asegurando trazabilidad completa del proceso logístico.
 
 ---
 
 ## 🧩 Problema de Negocio
 
-En operaciones de comercio exterior existen múltiples puntos críticos:
+En operaciones reales de comercio exterior:
 
-* Validaciones documentales manuales y lentas
-* Observaciones o rechazos sin control de plazos
-* Riesgo de eliminación de mercancía por incumplimiento documental
-* Falta de control en el acceso de camiones y conductores
-* Eventos operacionales no monitoreados (GPS, fatiga)
-* Ausencia de comunicación automática hacia el transportista
+* La documentación se valida tarde o manualmente
+* Los accesos al puerto no están completamente controlados
+* Existen errores en datos de ingreso (conductor, camión, embarque)
+* No hay control sobre eventos críticos durante el transporte
+* No existe comunicación automática clara hacia el transportista
 
-Este MVP simula una solución que orquesta estas validaciones y automatiza la decisión final.
+Esto genera:
+
+* retrasos
+* riesgos de fraude o robo
+* errores operacionales
+* riesgo de eliminación de mercancía
 
 ---
 
-## ⚙️ Flujo de la Solución
+## ⚙️ Flujo de la Solución (ACTUALIZADO)
 
 1. Validación documental
-2. Validación de acceso (conductor + camión)
-3. Evaluación de eventos operacionales
-4. Consolidación del estado de la operación
-5. Notificación automática al teléfono
+2. Validación de acceso al puerto
+3. Notificación al teléfono (autorización de ingreso)
+   2.5 Salida del camión del puerto hacia destino
+4. Monitoreo de eventos operacionales durante el trayecto
+5. Motor de decisión
+6. Resultado final de la operación
 
 ---
 
 ## 🏗️ Arquitectura del MVP
 
-Input JSON
-↓
 Validación Documental
 ↓
 Validación de Acceso
 ↓
-Evaluación de Eventos
+Notificación al Teléfono (habilita ingreso)
 ↓
-Orchestrator (Motor de Decisión)
+Salida del Puerto (inicio de tránsito)
+↓
+Monitoreo de Eventos
+↓
+Motor de Decisión
 ↓
 Resultado Final
-↓
-Notificación al Teléfono
 
 ---
 
 ## 🧠 Lógica de Negocio
 
-### 📄 Validación Documental
+---
 
-Estados posibles:
+### 📄 1. Validación Documental (PREVIA AL ARRIBO)
 
-* approved
-* observed
-* rejected
+Se valida antes de que la carga llegue al puerto.
 
-Además considera:
+#### Documentos evaluados:
 
-* días disponibles para regularización
-* vencimiento del plazo
-* acción requerida de la agencia de aduana
+* Facturas comerciales
+* Órdenes de compra
+* Datos de la carga (peso, bultos, origen, destino)
+* Datos del importador
+* Documentos de transporte
+* Seguros
+* Certificados y permisos
 
-Reglas:
+#### Estados:
 
-* Aprobado → habilitada
-* Observado con plazo vigente → observada
-* Rechazado con plazo vigente → observada
-* Observado con plazo vencido → bloqueada
-* Rechazado con plazo vencido → bloqueada (riesgo de eliminación de mercancía)
+* Aprobada → habilitada
+* Observada con plazo → observada
+* Rechazada con plazo → observada
+* Observada sin regularizar → bloqueada
+* Rechazada sin regularizar → bloqueada
+
+⚠️ Riesgo crítico:
+
+> Si no se regulariza dentro del plazo → posible eliminación de mercancía
 
 ---
 
-### 🚛 Validación de Acceso
+### 🚛 2. Validación de Acceso al Puerto
 
-Evalúa:
+Evalúa si el camión puede ingresar.
 
-* autorización del conductor
-* autorización del camión
+#### Datos evaluados:
 
-Reglas:
+* Fecha y hora de ingreso
+* Conductor (nombre, RUT, teléfono)
+* Camión (patente)
+* Número de embarque
+* Cita o reserva
 
-* No autorizado → bloqueada
-* Con observaciones → observada
-* Todo correcto → habilitada
+#### Reglas:
 
----
-
-### 📡 Evaluación de Eventos
-
-Evalúa:
-
-* desvío GPS (none, moderate, critical)
-* fatiga del conductor (low, medium, high)
-
-Reglas:
-
-* Riesgo alto → bloqueada
-* Riesgo medio → observada
-* Sin riesgo → habilitada
+* ❌ Datos inválidos → NO entra al puerto
+* ⚠️ Datos incompletos → queda en espera de validación por agencia de aduana
+* ✅ Datos completos y válidos → entra al puerto
 
 ---
 
-### 🧮 Resultado Consolidado
+### 📱 6. Notificación al Teléfono (AUTORIZACIÓN DE INGRESO)
 
-* Si existe cualquier bloqueo → bloqueada
-* Si no hay bloqueo pero sí observaciones → observada
-* Si todo está correcto → habilitada
+Se ejecuta inmediatamente después del acceso validado.
 
----
-
-### 📱 Notificación al Teléfono
-
-Si la operación es:
-
-* habilitada o observada → se genera notificación
-
-Contenido:
+#### Información enviada:
 
 * Nombre del conductor
 * RUT
-* Patente
+* Patente del camión
 * Número de embarque
-* Estado final
+* **Número de puerta de carga asignada**
+* Fecha y hora de ingreso
 
-Salida simulada en:
+#### Impacto operativo:
 
-output/phone_notification.txt
+* Levanta automáticamente la tranca de acceso
+* Permite el ingreso del camión al puerto
+
+---
+
+### 🚚 2.5 Salida del Camión del Puerto
+
+Una vez cargada la mercancía:
+
+* Se autoriza salida del puerto
+* Se inicia el tránsito hacia la bodega destino
+
+Este punto marca el inicio del monitoreo real.
+
+---
+
+### 📡 3. Monitoreo de Eventos (EN TRÁNSITO)
+
+⚠️ Importante:
+Este proceso ocurre **solo cuando la carga ya está en el camión**
+
+#### Eventos evaluados:
+
+* Desvío de ruta (GPS)
+* Violación de candado GPS
+* Robo o intento de asalto
+* Fatiga del conductor
+
+#### Niveles de riesgo:
+
+* 🔴 Alto → Bloqueada
+* 🟡 Medio → Observada
+* 🟢 Bajo → Habilitada
+
+---
+
+### 🧠 4. Motor de Decisión
+
+Consolida toda la información.
+
+#### Reglas reales:
+
+* 🔴 Si hay evento crítico (asalto, manipulación GPS):
+  → Se genera alarma automática a la comisaría más cercana
+
+* 🟡 Si hay fatiga del conductor:
+  → Se activa alarma en cabina
+  → Obligación de detenerse para cambio de conductor
+
+* 🟢 Si todo está correcto:
+  → Operación continúa normalmente
+
+---
+
+### 📊 5. Resultado Final
+
+Estados posibles:
+
+* ✅ HABILITADA → operación segura
+* ⚠️ OBSERVADA → requiere acción
+* ❌ BLOQUEADA → operación detenida
 
 ---
 
@@ -167,65 +214,39 @@ docs/
 
 ---
 
-## 📥 Ejemplo de Input
+## 📥 Input del Sistema
 
-{
-"documents": {
-"status": "observed",
-"days_to_deadline": 2,
-"deadline_expired": false,
-"customs_agency_response_required": true
-},
-"driver": {
-"full_name": "Juan Pérez Soto",
-"rut": "12.345.678-9",
-"phone": "+56912345678",
-"authorized": true,
-"has_observation": false
-},
-"vehicle": {
-"license_plate": "ABCD12",
-"authorized": true,
-"has_observation": false
-},
-"shipment": {
-"shipment_number": "EMB-2026-00125"
-},
-"events": {
-"gps_deviation": "moderate",
-"fatigue_level": "low"
-}
-}
+Simula toda la operación:
+
+* Documentación
+* Conductor
+* Vehículo
+* Embarque
+* Eventos
 
 ---
 
-## 📤 Ejemplo de Resultado
+## 📤 Output del Sistema
 
-{
-"final_status": "observada"
-}
+* Estado final de la operación
+* Notificación al teléfono
+* Evidencia del proceso
 
 ---
 
-## 🖼️ Diagrama de Arquitectura
+## 🖼️ Diagrama
 
-Ubicación del archivo:
+Ver:
 
-docs/arquitectura.png
-
-El diagrama representa:
-
-* flujo completo de validaciones
-* motor de decisión
-* generación de notificación
+![Diagrama de Arquitectura](docs/flujo_operacional_general.png)
 
 ---
 
 ## 🚀 Ejecución
 
-Desde la carpeta app:
-
+```bash
 python main.py
+```
 
 ---
 
@@ -233,41 +254,41 @@ python main.py
 
 Este MVP demuestra:
 
-* Modelamiento de reglas de negocio complejas
-* Orquestación de procesos operacionales
-* Enfoque en trazabilidad y control logístico
+* Modelamiento de procesos logísticos reales
+* Control de acceso portuario
+* Gestión de riesgo en transporte
 * Automatización de decisiones
-* Integración de validaciones en un flujo único
+* Integración de negocio + tecnología
 
 ---
 
 ## 🧠 Enfoque Profesional
 
-Este proyecto no busca ser un sistema productivo, sino demostrar:
+Este proyecto representa:
 
-* capacidad de diseño de soluciones
-* entendimiento de procesos logísticos reales
-* estructuración de lógica de negocio
-* visión de automatización operacional
+* pensamiento de arquitectura
+* diseño de flujo operacional
+* entendimiento de logística real
+* enfoque en automatización
 
 ---
 
-## 🔮 Evolución del MVP
+## 🔮 Evolución
 
-* API con FastAPI
-* Integración con SMS (Twilio)
-* Dashboard de monitoreo
+* Integración con GPS real
+* Integración con Carabineros / seguridad
+* API REST (FastAPI)
+* Dashboard en tiempo real
 * Motor de reglas configurable
-* Integración con sistemas aduaneros
 
 ---
 
 ## 👩‍💻 Autor
 
-Proyecto desarrollado como parte de portafolio profesional en:
+Proyecto orientado a portafolio profesional en:
 
-* Gestión de proyectos TI
-* Transformación digital
+* Delivery Management
+* Transformación Digital
 * Cloud & DevOps
 * Automatización de procesos
 
