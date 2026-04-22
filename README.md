@@ -20,19 +20,20 @@ Diseñar y desarrollar un prototipo funcional que simule la automatización de d
 
 En operaciones logísticas y de comercio exterior existen múltiples puntos críticos que impactan la continuidad y seguridad:
 
-- Validaciones manuales de acceso al puerto
-- Falta de control en el ingreso de camiones al recinto portuario
-- Ingreso de camiones no autorizados con riesgo de robo de carga
-- Procesos documentales lentos y propensos a errores
-- Falta de trazabilidad en eventos operacionales
-- Robo de mercancía tanto en carretera como dentro del puerto
-- Riesgo de fatiga de conductores durante el traslado
+### 🔐 Seguridad
+- Ingreso de camiones no autorizados al recinto portuario  
+- Robo de mercancía en carretera y dentro del puerto  
+- Falta de control en accesos físicos  
 
-Adicionalmente, la operación logística está sujeta a restricciones de tiempo:
+### ⚙️ Operación
+- Procesos manuales de validación  
+- Falta de trazabilidad en eventos operacionales  
+- Sistemas no integrados  
 
-- Los camiones deben cumplir ventanas de atención en el puerto
-- Si no se cumple el turno asignado, la carga puede quedar en piso
-- Existen multas por retraso en la operación
+### ⏱️ Cumplimiento
+- Ventanas horarias estrictas en el puerto  
+- Multas por retraso en la atención  
+- Riesgo de que la carga quede en piso por incumplimiento de turno  
 
 Estos factores generan:
 
@@ -49,27 +50,35 @@ Se propone una plataforma que automatiza la evaluación de una operación logís
 
 ### Capacidades principales
 
-- ✅ Control de acceso portuario (conductor y camión)
-- ✅ Validación documental (simulación de procesos regulatorios)
-- ✅ Monitoreo de riesgo logístico (GPS – robo o desvío de carga)
-- ✅ Monitoreo de condiciones del conductor (fatiga)
-- ✅ Evaluación de cumplimiento de ventanas operacionales
-- ✅ Orquestación de resultados en una decisión consolidada
+- ✅ Validación documental (simulación basada en criterios de entidades fiscalizadoras)  
+- ✅ Control de acceso portuario (conductor y camión)  
+- ✅ Monitoreo de riesgo logístico (GPS – robo o desvío de carga)  
+- ✅ Monitoreo de condiciones del conductor (fatiga)  
+- ✅ Evaluación de cumplimiento de ventanas operacionales  
+- ✅ Orquestación de resultados en una decisión consolidada  
+
+---
+
+## 🔄 Flujo General del Proceso
+
+![Flujo Operacional](./diagrams/flujo_operacional_general.png)
+
+> La validación documental considera criterios generales de cumplimiento regulatorio definidos por entidades fiscalizadoras del ámbito de comercio exterior.
 
 ---
 
 ## ⚙️ Flujo de la Operación
 
-1. Se recibe una solicitud de operación logística
-2. El camión se presenta en el punto de control (simulación de tótem)
-3. Se valida el acceso del conductor y camión
-4. Se evalúa la documentación de la carga
-5. Se analizan eventos operacionales:
-   - Alerta GPS (posible robo o desvío)
-   - Fatiga del conductor
-6. Se valida cumplimiento de ventana horaria
-7. Se ejecuta el motor de decisiones
-8. Se entrega un resultado consolidado
+1. Se recibe una solicitud de operación logística  
+2. Se realiza la validación documental de la carga  
+3. Si la documentación es conforme, el camión se presenta en el punto de control  
+4. Se valida el acceso del conductor y del camión  
+5. Se analizan eventos operacionales:  
+   - Alerta GPS (posible robo o desvío)  
+   - Fatiga del conductor  
+6. Se valida cumplimiento de ventana horaria  
+7. Se ejecuta el motor de decisiones  
+8. Se entrega un resultado consolidado  
 
 ---
 
@@ -77,10 +86,10 @@ Se propone una plataforma que automatiza la evaluación de una operación logís
 
 ### Resultado por módulo
 
-- Acceso: `APROBADO | OBSERVADO | RECHAZADO`
-- Documentación: `APROBADO | OBSERVADO | RECHAZADO`
-- GPS: `NORMAL | ALERTA`
-- Fatiga: `NORMAL | ALERTA`
+- Acceso: `APROBADO | OBSERVADO | RECHAZADO`  
+- Documentación: `APROBADO | OBSERVADO | RECHAZADO`  
+- GPS: `NORMAL | ALERTA`  
+- Fatiga: `NORMAL | ALERTA`  
 
 ---
 
@@ -94,13 +103,7 @@ Se propone una plataforma que automatiza la evaluación de una operación logís
 
 ---
 
-## 🔄 Flujo General del Proceso
-
-![Flujo Operacional](./diagrams/flujo_operacional_general.png)
-
----
-
-## 🧪 Ejemplo de Input
+## 🧪 Ejemplo de Input (simplificado)
 
 ```json
 {
