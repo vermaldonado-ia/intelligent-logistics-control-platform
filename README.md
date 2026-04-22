@@ -31,15 +31,15 @@ Esto genera:
 
 ---
 
-## ⚙️ Flujo de la Solución (ACTUALIZADO)
+## ⚙️ Flujo de la Solución
 
 1. Validación documental
 2. Validación de acceso al puerto
-3. Notificación al teléfono (autorización de ingreso)
-   2.5 Salida del camión del puerto hacia destino
-4. Monitoreo de eventos operacionales durante el trayecto
-5. Motor de decisión
-6. Resultado final de la operación
+3. Notificación al teléfono (habilita ingreso al puerto)
+4. Salida del camión del puerto hacia destino
+5. Monitoreo de eventos operacionales durante el trayecto
+6. Motor de decisión
+7. Resultado final de la operación
 
 ---
 
@@ -49,7 +49,7 @@ Validación Documental
 ↓
 Validación de Acceso
 ↓
-Notificación al Teléfono (habilita ingreso)
+Notificación al Teléfono (habilita tranca de acceso)
 ↓
 Salida del Puerto (inicio de tránsito)
 ↓
@@ -88,8 +88,7 @@ Se valida antes de que la carga llegue al puerto.
 * Rechazada sin regularizar → bloqueada
 
 ⚠️ Riesgo crítico:
-
-> Si no se regulariza dentro del plazo → posible eliminación de mercancía
+Si no se regulariza dentro del plazo → posible eliminación de mercancía
 
 ---
 
@@ -107,13 +106,13 @@ Evalúa si el camión puede ingresar.
 
 #### Reglas:
 
-* ❌ Datos inválidos → NO entra al puerto
-* ⚠️ Datos incompletos → queda en espera de validación por agencia de aduana
-* ✅ Datos completos y válidos → entra al puerto
+* ❌ Datos inválidos → No entra al puerto
+* ⚠️ Datos incompletos → Queda en espera de validación por agencia de aduana
+* ✅ Datos completos y válidos → Acceso autorizado
 
 ---
 
-### 📱 6. Notificación al Teléfono (AUTORIZACIÓN DE INGRESO)
+### 📱 3. Notificación al Teléfono (AUTORIZACIÓN DE INGRESO)
 
 Se ejecuta inmediatamente después del acceso validado.
 
@@ -123,17 +122,17 @@ Se ejecuta inmediatamente después del acceso validado.
 * RUT
 * Patente del camión
 * Número de embarque
-* **Número de puerta de carga asignada**
+* Número de puerta de carga asignada
 * Fecha y hora de ingreso
 
 #### Impacto operativo:
 
-* Levanta automáticamente la tranca de acceso
-* Permite el ingreso del camión al puerto
+👉 La notificación habilita la apertura de la tranca de acceso
+👉 Permite el ingreso físico del camión al puerto
 
 ---
 
-### 🚚 2.5 Salida del Camión del Puerto
+### 🚚 4. Salida del Camión del Puerto
 
 Una vez cargada la mercancía:
 
@@ -144,10 +143,9 @@ Este punto marca el inicio del monitoreo real.
 
 ---
 
-### 📡 3. Monitoreo de Eventos (EN TRÁNSITO)
+### 📡 5. Monitoreo de Eventos (EN TRÁNSITO)
 
-⚠️ Importante:
-Este proceso ocurre **solo cuando la carga ya está en el camión**
+Este proceso ocurre solo cuando la carga ya está en el camión.
 
 #### Eventos evaluados:
 
@@ -164,25 +162,25 @@ Este proceso ocurre **solo cuando la carga ya está en el camión**
 
 ---
 
-### 🧠 4. Motor de Decisión
+### 🧠 6. Motor de Decisión
 
 Consolida toda la información.
 
-#### Reglas reales:
+#### Reglas:
 
-* 🔴 Si hay evento crítico (asalto, manipulación GPS):
-  → Se genera alarma automática a la comisaría más cercana
+* 🔴 Evento crítico (asalto o manipulación GPS)
+  → Alarma automática a la comisaría más cercana
 
-* 🟡 Si hay fatiga del conductor:
-  → Se activa alarma en cabina
-  → Obligación de detenerse para cambio de conductor
+* 🟡 Fatiga del conductor
+  → Alarma en cabina
+  → Detención obligatoria
 
-* 🟢 Si todo está correcto:
-  → Operación continúa normalmente
+* 🟢 Sin riesgo
+  → Operación continúa
 
 ---
 
-### 📊 5. Resultado Final
+### 📊 7. Resultado Final
 
 Estados posibles:
 
@@ -234,11 +232,11 @@ Simula toda la operación:
 
 ---
 
-## 🖼️ Diagrama
+## 🖼️ Diagrama de Arquitectura
 
-Ver:
+El siguiente diagrama representa el flujo completo del sistema:
 
-![Diagrama de Arquitectura](diagrams/flujo_operacional_general.png)
+![Diagrama de Arquitectura](docs/arquitectura.png)
 
 ---
 
@@ -276,7 +274,7 @@ Este proyecto representa:
 ## 🔮 Evolución
 
 * Integración con GPS real
-* Integración con Carabineros / seguridad
+* Integración con sistemas de seguridad
 * API REST (FastAPI)
 * Dashboard en tiempo real
 * Motor de reglas configurable
