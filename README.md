@@ -9,8 +9,8 @@
 
 Diseñar y desarrollar un prototipo funcional que simule la automatización de decisiones en procesos logísticos, integrando:
 
-- Control de acceso de conductores y camiones a recintos operacionales
 - Validación documental en procesos de importación/exportación (simulación)
+- Control de acceso de conductores y camiones a recintos operacionales
 - Monitoreo de eventos de riesgo logístico (GPS y condiciones del conductor)
 - Orquestación de decisiones para determinar el estado de la operación
 
