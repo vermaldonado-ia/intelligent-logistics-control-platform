@@ -94,6 +94,12 @@ Se propone una plataforma que automatiza la evaluación de una operación logís
 
 ---
 
+## 🔄 Flujo General del Proceso
+
+![Flujo Operacional](./diagrams/flujo_operacional_general.png)
+
+---
+
 ## 🧪 Ejemplo de Input
 
 ```json
