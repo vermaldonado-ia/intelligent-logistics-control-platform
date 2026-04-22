@@ -8,7 +8,7 @@ Este MVP modela un flujo realista desde la validación documental previa hasta e
 
 ## 🎯 Objetivo
 
-Automatizar el control de ingreso al puerto, salida de mercancía y monitoreo del transporte, reduciendo riesgos operacionales y asegurando trazabilidad completa del proceso logístico.
+Automatizar la validación documental previa por parte del ente fiscalizador (aduana), el control de ingreso al puerto, la salida de mercancía y el monitoreo del transporte, reduciendo riesgos operacionales y asegurando trazabilidad completa del proceso logístico.
 
 ---
 
@@ -238,7 +238,7 @@ Simula toda la operación:
 
 Ver:
 
-![Diagrama de Arquitectura](docs/flujo_operacional_general.png)
+![Diagrama de Arquitectura](diagrams/flujo_operacional_general.png)
 
 ---
 
