@@ -236,7 +236,7 @@ Simula toda la operación:
 
 El siguiente diagrama representa el flujo completo del sistema:
 
-![Diagrama de Arquitectura](docs/arquitectura.png)
+![Diagrama de Arquitectura](diagrams/flujo_operacional_general.png)
 
 ---
 
