@@ -57,3 +57,4 @@ def assess_risk(data: Dict[str, Any]) -> Dict[str, Any]:
         "observations": observations,
         "details": "Risk assessment completed"
     }
+    
