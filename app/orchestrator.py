@@ -44,4 +44,3 @@ def process_operation(data: Dict[str, Any]) -> Dict[str, Any]:
         "ticket": ticket,
         "notification": notification
     }
-    
