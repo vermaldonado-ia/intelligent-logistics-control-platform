@@ -24,3 +24,4 @@ def generate_ticket(
         "risk_score": evaluation_summary.get("risk_score", 0),
         "qr_code": qr_simulated
     }
+    
