@@ -1,12 +1,27 @@
 # 🚀 Intelligent Logistics Control Platform
 
-Simulación de una plataforma inteligente para el **control de acceso logístico, validación documental y evaluación de riesgo operacional** en procesos de transporte y comercio exterior.
+![CI](https://github.com/vermaldonado-ia/intelligent-logistics-control-platform/actions/workflows/ci.yml/badge.svg)
+![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=vermaldonado-ia_intelligent-logistics-control-platform\&metric=alert_status)
+![Coverage](https://sonarcloud.io/api/project_badges/measure?project=vermaldonado-ia_intelligent-logistics-control-platform\&metric=coverage)
+
+---
+
+## 🧠 Descripción
+
+Simulación de una **plataforma inteligente de control logístico**, diseñada para automatizar decisiones críticas en procesos de transporte y comercio exterior.
+
+El sistema integra validación documental, control de acceso y análisis de riesgo operacional, permitiendo simular un flujo real de decisión automatizada en entornos logísticos complejos.
 
 ---
 
 ## 🎯 Objetivo
 
-Diseñar una solución tecnológica que permita **automatizar decisiones operacionales críticas**, reduciendo riesgos, errores manuales y tiempos de validación en entornos logísticos.
+Diseñar una solución tecnológica orientada a negocio que permita:
+
+* Reducir riesgos operacionales
+* Disminuir errores manuales
+* Mejorar tiempos de validación
+* Aumentar trazabilidad y control
 
 ---
 
@@ -20,10 +35,10 @@ En operaciones logísticas reales existen múltiples puntos críticos:
 * Evaluación tardía de riesgos operacionales
 * Procesos lentos y propensos a error
 
-👉 Esto impacta directamente en:
+👉 Impacto directo:
 
-* Seguridad
-* Continuidad operacional
+* Seguridad operativa
+* Continuidad del servicio
 * Trazabilidad
 * Eficiencia del proceso
 
@@ -47,17 +62,17 @@ Se desarrolló una API que simula un **motor de decisiones inteligente**, capaz 
 ```bash
 app/
 ├── api.py                # API FastAPI
-├── orchestrator.py      # Orquestador principal
-└── services/            # Lógica de negocio
+├── orchestrator.py       # Orquestador de decisiones
+└── services/             # Lógica de negocio desacoplada
     ├── document_validator.py
     ├── access_control.py
     ├── risk_assessor.py
     ├── ticket_generator.py
     └── notification_service.py
 
-tests/                   # Pruebas automatizadas
-sample_data/             # Datos de prueba
-diagrams/                # Diagramas de flujo
+tests/                    # Pruebas automatizadas
+sample_data/              # Datos de prueba
+diagrams/                 # Diagramas de flujo
 ```
 
 ---
@@ -72,11 +87,8 @@ diagrams/                # Diagramas de flujo
 6. Generación de ticket
 7. Envío de notificación
 
-📌 Ver diagrama en:
-
-```
-diagrams/flujo_operacional_general.png
-```
+📌 Ver diagrama:
+`diagrams/flujo_operacional_general.png`
 
 ---
 
@@ -102,7 +114,7 @@ Respuesta:
 POST /evaluate
 ```
 
-Ejemplo de request:
+Ejemplo:
 
 ```json
 {
@@ -145,7 +157,7 @@ Ejemplo de request:
 
 ---
 
-## 🧪 Pruebas
+## 🧪 Pruebas y Calidad
 
 Ejecución de tests:
 
@@ -159,6 +171,10 @@ Cobertura:
 pytest --cov=app
 ```
 
+✔️ Integrado en CI con GitHub Actions
+✔️ Validación de calidad con SonarCloud
+✔️ Control de cobertura automatizado
+
 ---
 
 ## ⚙️ Tecnologías
@@ -168,6 +184,8 @@ pytest --cov=app
 * Pytest
 * Flake8
 * Coverage
+* GitHub Actions (CI)
+* SonarCloud (Quality Gate)
 
 ---
 
@@ -186,32 +204,50 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## 🧠 Enfoque
+## 🧠 Enfoque Arquitectónico
 
-Este proyecto no busca solo implementar código, sino demostrar:
+Este proyecto demuestra:
 
 * Diseño de soluciones orientadas a negocio
 * Orquestación de lógica compleja
-* Separación de capas
-* Buenas prácticas de desarrollo
-* Base para integración CI/CD y calidad
+* Separación de responsabilidades (services layer)
+* Testing automatizado
+* Integración CI/CD
+* Control de calidad continuo
 
 ---
 
-## 📌 Próximos pasos
+## 📈 Valor para el negocio
 
-* Integración CI/CD (GitHub Actions)
-* Quality Gate con SonarCloud
-* Deploy en cloud (Azure / Render)
+Esta solución simula un escenario real donde:
+
+* Se reduce el riesgo de acceso no autorizado
+* Se mejora la toma de decisiones operacionales
+* Se automatiza la validación documental
+* Se incrementa la trazabilidad del proceso
+
+👉 Base directa para sistemas de:
+
+* Control portuario
+* Transporte terrestre
+* Aduanas / comercio exterior
+* Plataformas logísticas inteligentes
+
+---
+
+## 🚀 Próximos pasos
+
+* Deploy en cloud (AWS / Azure / Render)
+* Integración con servicios externos (APIs reales)
+* Incorporación de IA para scoring de riesgo
 * Evolución hacia arquitectura distribuida
 
 ---
 
 ## 👩‍💻 Autor
 
-Verónica Maldonado Céspedes
+**Verónica Maldonado Céspedes**
 Ingeniera Civil Informática
-Project Manager | Cloud & DevOps Delivery
 
----
+Project Manager | Cloud & DevOps Delivery
 
