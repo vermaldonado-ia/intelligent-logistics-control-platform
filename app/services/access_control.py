@@ -1,6 +1,5 @@
 from typing import Dict, Any, List
 
-
 ALLOWED_CARGO_TYPES = [
     "general",
     "container",
@@ -41,6 +40,5 @@ def evaluate_access(data: Dict[str, Any]) -> Dict[str, Any]:
     return {
         "status": status,
         "issues": issues,
-        "details": "Access control evaluation completed"
+        "details": "Access control evaluation completed",
     }
-    

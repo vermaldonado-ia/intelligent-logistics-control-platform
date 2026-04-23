@@ -42,5 +42,5 @@ def process_operation(data: Dict[str, Any]) -> Dict[str, Any]:
         "access_control": access_result,
         "risk_assessment": risk_result,
         "ticket": ticket,
-        "notification": notification
+        "notification": notification,
     }

@@ -1,7 +1,6 @@
 from datetime import datetime
 from typing import Dict, List, Any
 
-
 REQUIRED_DOCUMENTS = [
     "driver_license",
     "vehicle_permit",
@@ -57,6 +56,5 @@ def validate_documents(data: Dict[str, Any]) -> Dict[str, Any]:
     return {
         "status": status,
         "issues": issues,
-        "details": "Document validation completed"
+        "details": "Document validation completed",
     }
-    

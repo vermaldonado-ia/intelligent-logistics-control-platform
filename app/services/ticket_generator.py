@@ -22,6 +22,5 @@ def generate_ticket(
         "issues": evaluation_summary.get("issues", []),
         "risk_level": evaluation_summary.get("risk_level", "unknown"),
         "risk_score": evaluation_summary.get("risk_score", 0),
-        "qr_code": qr_simulated
+        "qr_code": qr_simulated,
     }
-    
