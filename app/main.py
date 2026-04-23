@@ -19,3 +19,4 @@ if __name__ == "__main__":
     result = process_operation(input_data)
 
     print(json.dumps(result, indent=4, ensure_ascii=False))
+    
