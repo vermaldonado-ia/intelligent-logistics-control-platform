@@ -14,3 +14,4 @@ def send_notification(ticket: Dict[str, Any]) -> Dict[str, Any]:
         "notification_status": "sent",
         "message": message
     }
+    
