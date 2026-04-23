@@ -1,83 +1,47 @@
-from services.document_validator import validate_documents
-from services.access_validator import validate_access
-from services.event_evaluator import evaluate_events
-from services.notification_service import (
-    build_phone_notification,
-    save_notification_to_file,
-)
-from services.ticket_generator import (
-    build_access_ticket,
-    save_ticket_to_file,
-)
+from typing import Dict, Any, List
+
+from app.services.document_validator import validate_documents
+from app.services.access_control import evaluate_access
+from app.services.risk_assessor import assess_risk
+from app.services.ticket_generator import generate_ticket
+from app.services.notification_service import send_notification
 
 
-def consolidate_status(document_result: dict, access_result: dict, event_result: dict) -> str:
-    """
-    Consolida el estado final de la operación.
-    """
-    results = [document_result, access_result, event_result]
+def process_operation(data: Dict[str, Any]) -> Dict[str, Any]:
+    document_result = validate_documents(data)
+    access_result = evaluate_access(data)
+    risk_result = assess_risk(data)
 
-    if any(result["status"] == "bloqueada" for result in results):
-        return "bloqueada"
+    all_issues: List[str] = []
+    all_observations: List[str] = []
 
-    if any(result["status"] == "observada" for result in results):
-        return "observada"
+    all_issues.extend(document_result.get("issues", []))
+    all_issues.extend(access_result.get("issues", []))
+    all_observations.extend(risk_result.get("observations", []))
 
-    return "habilitada"
+    if document_result["status"] == "rejected" or access_result["status"] == "rejected":
+        final_status = "REJECTED"
+    elif risk_result["risk_level"] == "high":
+        final_status = "REVIEW_REQUIRED"
+    else:
+        final_status = "APPROVED"
 
-
-def process_operation(input_data: dict) -> dict:
-    """
-    Orquesta el flujo completo del MVP.
-    """
-    document_result = validate_documents(input_data.get("documents", {}))
-
-    access_result = validate_access(
-        input_data.get("access", {}),
-        input_data.get("driver", {}),
-        input_data.get("vehicle", {}),
-        input_data.get("shipment", {})
-    )
-
-    event_result = evaluate_events(input_data.get("events", {}))
-
-    final_status = consolidate_status(document_result, access_result, event_result)
-
-    notification_result = {
-        "status": "not_generated",
-        "phone": None,
-        "message": None
+    summary = {
+        "issues": all_issues,
+        "observations": all_observations,
+        "risk_level": risk_result["risk_level"],
+        "risk_score": risk_result["risk_score"],
     }
 
-    ticket_result = {
-        "status": "not_generated",
-        "ticket": None
-    }
-
-    if access_result["status"] == "habilitada":
-        notification_result = build_phone_notification(
-            driver=input_data.get("driver", {}),
-            vehicle=input_data.get("vehicle", {}),
-            shipment=input_data.get("shipment", {}),
-            access=input_data.get("access", {})
-        )
-        save_notification_to_file(notification_result, "../output/phone_notification.txt")
-
-        ticket_result = build_access_ticket(
-            driver=input_data.get("driver", {}),
-            vehicle=input_data.get("vehicle", {}),
-            shipment=input_data.get("shipment", {}),
-            access=input_data.get("access", {}),
-            access_status=access_result["status"],
-            observations=access_result.get("reasons", [])
-        )
-        save_ticket_to_file(ticket_result["ticket"], "../output/access_ticket.txt")
+    ticket = generate_ticket(final_status, summary)
+    notification = send_notification(ticket)
 
     return {
+        "operation_status": final_status,
         "document_validation": document_result,
-        "access_validation": access_result,
-        "event_evaluation": event_result,
-        "final_status": final_status,
-        "phone_notification": notification_result,
-        "access_ticket": ticket_result
+        "access_control": access_result,
+        "risk_assessment": risk_result,
+        "ticket": ticket,
+        "notification": notification
     }
+    

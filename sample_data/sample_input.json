@@ -1,0 +1,34 @@
+{
+    "driver": {
+        "authorized": true,
+        "fatigue_level": "medium"
+    },
+    "vehicle": {
+        "authorized": true
+    },
+    "cargo": {
+        "type": "container",
+        "declared_value": 120000
+    },
+    "port_access_allowed": true,
+    "gps": {
+        "zone": "warning"
+    },
+    "incident_history": {
+        "previous_incidents": 1
+    },
+    "documents": {
+        "driver_license": {
+            "present": true,
+            "expiry_date": "2027-12-31"
+        },
+        "vehicle_permit": {
+            "present": true,
+            "expiry_date": "2027-10-15"
+        },
+        "cargo_manifest": {
+            "present": true,
+            "expiry_date": "2027-08-01"
+        }
+    }
+}

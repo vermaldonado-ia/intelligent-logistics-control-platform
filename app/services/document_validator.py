@@ -1,66 +1,61 @@
-def validate_documents(documents: dict) -> dict:
+from datetime import datetime
+from typing import Dict, List, Any
+
+
+REQUIRED_DOCUMENTS = [
+    "driver_license",
+    "vehicle_permit",
+    "cargo_manifest",
+]
+
+
+def _parse_date(date_str: str) -> datetime | None:
     """
-    Valida el estado documental previo al arribo al puerto.
+    Convierte una fecha en formato YYYY-MM-DD a datetime.
+    Retorna None si el formato es inválido.
     """
-    document_status = documents.get("status", "rejected")
-    days_to_deadline = documents.get("days_to_deadline", 0)
-    deadline_expired = documents.get("deadline_expired", False)
-    customs_agency_response_required = documents.get(
-        "customs_agency_response_required",
-        False
-    )
+    try:
+        return datetime.strptime(date_str, "%Y-%m-%d")
+    except (ValueError, TypeError):
+        return None
 
-    reasons = []
 
-    if document_status == "approved":
-        reasons.append("Documentación aprobada correctamente por el ente fiscalizador.")
-        return {
-            "status": "habilitada",
-            "reasons": reasons
-        }
+def validate_documents(data: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Valida que existan los documentos requeridos y que no estén vencidos.
+    """
+    documents = data.get("documents", {})
+    issues: List[str] = []
 
-    if document_status == "observed":
-        if deadline_expired:
-            reasons.append("Documentación observada con plazo vencido para regularización.")
-            reasons.append("Existe riesgo de eliminación o bloqueo de la mercancía.")
-            return {
-                "status": "bloqueada",
-                "reasons": reasons
-            }
+    for doc_name in REQUIRED_DOCUMENTS:
+        if doc_name not in documents:
+            issues.append(f"Missing required document: {doc_name}")
+            continue
 
-        reasons.append("Documentación observada.")
-        reasons.append(
-            f"La agencia de aduana debe regularizar la información dentro de {days_to_deadline} día(s)."
-        )
-        if customs_agency_response_required:
-            reasons.append("Se requiere acción de la agencia de aduana.")
-        return {
-            "status": "observada",
-            "reasons": reasons
-        }
+        doc_info = documents[doc_name]
 
-    if document_status == "rejected":
-        if deadline_expired:
-            reasons.append("Documentación rechazada con plazo vencido.")
-            reasons.append("La mercancía queda en riesgo de eliminación.")
-            return {
-                "status": "bloqueada",
-                "reasons": reasons
-            }
+        if not isinstance(doc_info, dict):
+            issues.append(f"Invalid document format: {doc_name}")
+            continue
 
-        reasons.append("Documentación rechazada.")
-        reasons.append(
-            f"La agencia de aduana debe volver a ingresar la documentación dentro de {days_to_deadline} día(s)."
-        )
-        if customs_agency_response_required:
-            reasons.append("Se requiere acción inmediata de la agencia de aduana.")
-        return {
-            "status": "observada",
-            "reasons": reasons
-        }
+        is_present = doc_info.get("present", False)
+        expiry_date = doc_info.get("expiry_date")
 
-    reasons.append("Estado documental no reconocido.")
+        if not is_present:
+            issues.append(f"Document not present: {doc_name}")
+
+        parsed_expiry = _parse_date(expiry_date)
+        if parsed_expiry is None:
+            issues.append(f"Invalid expiry date format for: {doc_name}")
+            continue
+
+        if parsed_expiry.date() < datetime.now().date():
+            issues.append(f"Expired document: {doc_name}")
+
+    status = "approved" if not issues else "rejected"
+
     return {
-        "status": "bloqueada",
-        "reasons": reasons
+        "status": status,
+        "issues": issues,
+        "details": "Document validation completed"
     }

@@ -2,7 +2,7 @@
 
 Simulación de una plataforma inteligente para el control logístico y validación operacional en procesos de transporte y comercio exterior.
 
-Este MVP modela un flujo realista desde la validación documental previa hasta el monitoreo de la carga en tránsito, integrando control operativo, gestión de riesgos y automatización de decisiones.
+Este MVP modela un flujo realista desde la validación documental previa por el ente fiscalizador hasta el monitoreo de la carga en tránsito, integrando control operativo, gestión de riesgos y automatización de decisiones.
 
 ---
 
@@ -16,28 +16,28 @@ Automatizar la validación documental previa por parte del ente fiscalizador (ad
 
 En operaciones reales de comercio exterior:
 
-* La documentación se valida tarde o manualmente
-* Los accesos al puerto no están completamente controlados
-* Existen errores en datos de ingreso (conductor, camión, embarque)
-* No hay control sobre eventos críticos durante el transporte
-* No existe comunicación automática clara hacia el transportista
+* La documentación se valida manualmente o fuera de tiempo
+* Existen observaciones o rechazos sin control efectivo de plazos
+* Hay errores en los datos de ingreso al puerto (conductor, camión, embarque)
+* No existe control robusto sobre eventos críticos durante el transporte
+* No hay comunicación automática clara hacia el transportista
 
 Esto genera:
 
-* retrasos
-* riesgos de fraude o robo
-* errores operacionales
-* riesgo de eliminación de mercancía
+* retrasos operacionales
+* riesgo de fraude o robo de mercancía
+* errores en la ejecución logística
+* riesgo de eliminación de mercancía por incumplimiento documental
 
 ---
 
 ## ⚙️ Flujo de la Solución
 
-1. Validación documental
+1. Validación documental (ente fiscalizador)
 2. Validación de acceso al puerto
-3. Notificación al teléfono (habilita ingreso al puerto)
+3. Notificación al teléfono (habilita ingreso)
 4. Salida del camión del puerto hacia destino
-5. Monitoreo de eventos operacionales durante el trayecto
+5. Monitoreo de eventos operacionales (en tránsito)
 6. Motor de decisión
 7. Resultado final de la operación
 
@@ -73,11 +73,11 @@ Se valida antes de que la carga llegue al puerto.
 
 * Facturas comerciales
 * Órdenes de compra
-* Datos de la carga (peso, bultos, origen, destino)
-* Datos del importador
+* Datos de la carga
+* Datos del importador/exportador
 * Documentos de transporte
 * Seguros
-* Certificados y permisos
+* Certificados y permisos regulatorios
 
 #### Estados:
 
@@ -102,19 +102,19 @@ Evalúa si el camión puede ingresar.
 * Conductor (nombre, RUT, teléfono)
 * Camión (patente)
 * Número de embarque
-* Cita o reserva
+* Puerta de carga asignada
 
 #### Reglas:
 
 * ❌ Datos inválidos → No entra al puerto
 * ⚠️ Datos incompletos → Queda en espera de validación por agencia de aduana
-* ✅ Datos completos y válidos → Acceso autorizado
+* ✅ Datos completos y validados → Acceso autorizado
 
 ---
 
 ### 📱 3. Notificación al Teléfono (AUTORIZACIÓN DE INGRESO)
 
-Se ejecuta inmediatamente después del acceso validado.
+Se ejecuta inmediatamente después de validar el acceso.
 
 #### Información enviada:
 
@@ -122,13 +122,27 @@ Se ejecuta inmediatamente después del acceso validado.
 * RUT
 * Patente del camión
 * Número de embarque
-* Número de puerta de carga asignada
+* Puerta de carga asignada
 * Fecha y hora de ingreso
 
 #### Impacto operativo:
 
-👉 La notificación habilita la apertura de la tranca de acceso
-👉 Permite el ingreso físico del camión al puerto
+* Habilita la apertura automática de la tranca de acceso
+* Permite el ingreso físico del camión al puerto
+
+---
+
+### 🧾 Ticket Digital de Acceso
+
+Como complemento operativo, el sistema genera un ticket digital con:
+
+* Fecha y hora de emisión
+* Código único de ticket
+* Estado de acceso
+* Observaciones
+* Código QR simulado
+
+Este ticket actúa como evidencia del proceso y trazabilidad de la operación.
 
 ---
 
@@ -145,12 +159,12 @@ Este punto marca el inicio del monitoreo real.
 
 ### 📡 5. Monitoreo de Eventos (EN TRÁNSITO)
 
-Este proceso ocurre solo cuando la carga ya está en el camión.
+Este proceso ocurre únicamente cuando la carga ya está en el camión.
 
 #### Eventos evaluados:
 
 * Desvío de ruta (GPS)
-* Violación de candado GPS
+* Manipulación o violación de candado GPS
 * Robo o intento de asalto
 * Fatiga del conductor
 
@@ -164,19 +178,19 @@ Este proceso ocurre solo cuando la carga ya está en el camión.
 
 ### 🧠 6. Motor de Decisión
 
-Consolida toda la información.
+Consolida toda la información operacional.
 
 #### Reglas:
 
 * 🔴 Evento crítico (asalto o manipulación GPS)
-  → Alarma automática a la comisaría más cercana
+  → Genera alarma automática a la comisaría más cercana
 
 * 🟡 Fatiga del conductor
-  → Alarma en cabina
-  → Detención obligatoria
+  → Activa alarma en cabina
+  → Obliga detención para cambio de conductor
 
 * 🟢 Sin riesgo
-  → Operación continúa
+  → Operación continúa normalmente
 
 ---
 
@@ -199,36 +213,18 @@ app/
 ├── document_validator.py
 ├── access_validator.py
 ├── event_evaluator.py
-└── notification_service.py
+├── notification_service.py
+└── ticket_generator.py
 
 data/
 └── sample_input.json
 
 output/
-└── phone_notification.txt
+├── phone_notification.txt
+└── access_ticket.txt
 
 docs/
 └── arquitectura.png
-
----
-
-## 📥 Input del Sistema
-
-Simula toda la operación:
-
-* Documentación
-* Conductor
-* Vehículo
-* Embarque
-* Eventos
-
----
-
-## 📤 Output del Sistema
-
-* Estado final de la operación
-* Notificación al teléfono
-* Evidencia del proceso
 
 ---
 
@@ -248,6 +244,27 @@ python main.py
 
 ---
 
+## 📥 Input del Sistema
+
+Simula:
+
+* Validación documental
+* Datos de acceso
+* Conductor y vehículo
+* Embarque
+* Eventos operacionales
+
+---
+
+## 📤 Output del Sistema
+
+* Estado final de la operación
+* Notificación al teléfono
+* Ticket digital de acceso
+* Evidencia del proceso
+
+---
+
 ## 💡 Valor del Proyecto
 
 Este MVP demuestra:
@@ -256,26 +273,26 @@ Este MVP demuestra:
 * Control de acceso portuario
 * Gestión de riesgo en transporte
 * Automatización de decisiones
-* Integración de negocio + tecnología
+* Integración entre negocio y tecnología
 
 ---
 
 ## 🧠 Enfoque Profesional
 
-Este proyecto representa:
+Este proyecto refleja:
 
-* pensamiento de arquitectura
-* diseño de flujo operacional
-* entendimiento de logística real
-* enfoque en automatización
+* Diseño de arquitectura de solución
+* Pensamiento orientado a procesos
+* Traducción de reglas de negocio a lógica técnica
+* Enfoque en eficiencia operativa y reducción de riesgos
 
 ---
 
 ## 🔮 Evolución
 
 * Integración con GPS real
-* Integración con sistemas de seguridad
-* API REST (FastAPI)
+* Integración con sistemas de seguridad pública
+* API REST con FastAPI
 * Dashboard en tiempo real
 * Motor de reglas configurable
 
@@ -283,10 +300,9 @@ Este proyecto representa:
 
 ## 👩‍💻 Autor
 
-Proyecto orientado a portafolio profesional en:
+Proyecto desarrollado como parte de portafolio profesional en:
 
 * Delivery Management
 * Transformación Digital
 * Cloud & DevOps
 * Automatización de procesos
-
