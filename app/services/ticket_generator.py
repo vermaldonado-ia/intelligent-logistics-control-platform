@@ -3,7 +3,9 @@ from typing import Dict, Any
 from uuid import uuid4
 
 
-def generate_ticket(final_status: str, evaluation_summary: Dict[str, Any]) -> Dict[str, Any]:
+def generate_ticket(
+    final_status: str, evaluation_summary: Dict[str, Any]
+) -> Dict[str, Any]:
     """
     Genera un ticket operacional con trazabilidad básica.
     """
