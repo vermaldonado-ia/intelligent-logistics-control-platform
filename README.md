@@ -387,9 +387,8 @@ python -m uvicorn app.api:app --reload
 
 Acceder a:
 
-```
+🔗 Swagger local (ejecución en entorno de desarrollo):
 http://127.0.0.1:8000/docs
-```
 
 ---
 
@@ -410,8 +409,9 @@ Esta solución simula un escenario real donde:
 * Plataformas logísticas inteligentes
 
 ✔ Reducción de exposición a riesgos operacionales  
-✔ Mejora en tiempos de validación y toma de decisión  
-✔ Base para automatización de procesos logísticos complejos  
+✔ Mejora en tiempos de validación y toma de decisiones  
+✔ Incremento en trazabilidad y control operacional  
+✔ Base para automatización de procesos logísticos críticos   
 
 ---
 
