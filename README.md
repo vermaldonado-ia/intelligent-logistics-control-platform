@@ -1,8 +1,12 @@
-# 🚀 Intelligent Logistics Control Platform
+🚀 Intelligent Logistics Control Platform  
 
 ![CI](https://github.com/vermaldonado-ia/intelligent-logistics-control-platform/actions/workflows/ci.yml/badge.svg)
 ![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=vermaldonado-ia_intelligent-logistics-control-platform\&metric=alert_status)
 ![Coverage](https://sonarcloud.io/api/project_badges/measure?project=vermaldonado-ia_intelligent-logistics-control-platform\&metric=coverage)
+
+👉 API inteligente para automatizar decisiones logísticas con validación, control de acceso y análisis de riesgo en tiempo real.
+
+🔗 Swagger local: http://127.0.0.1:8000/docs
 
 ---
 
@@ -83,39 +87,6 @@ app/
 
 ---
 
-## 🏗️ Arquitectura
-
-```bash
-app/
-├── api.py                # API FastAPI
-├── orchestrator.py       # Orquestador de decisiones
-└── services/             # Lógica de negocio desacoplada
-    ├── document_validator.py
-    ├── access_control.py
-    ├── risk_assessor.py
-    ├── ticket_generator.py
-    └── notification_service.py
-
-tests/                    # Pruebas automatizadas
-sample_data/              # Datos de prueba
-diagrams/                 # Diagramas de flujo
-```
-
----
-
-## 🧠 Enfoque Arquitectónico
-
-Este proyecto demuestra:
-
-* Diseño de soluciones orientadas a negocio
-* Orquestación de lógica compleja
-* Separación de responsabilidades (services layer)
-* Testing automatizado
-* Integración CI/CD
-* Control de calidad continuo
-
----
-
 ## 🔄 Flujo de la Solución
 
 1. Recepción de datos de operación logística
@@ -128,6 +99,39 @@ Este proyecto demuestra:
 
 📌 Ver diagrama:
 `diagrams/flujo_operacional_general.png`
+
+---
+
+## 🚨 Casos de uso y escenarios
+
+El sistema contempla distintos escenarios operacionales:
+
+### ✔️ Caso aprobado
+
+* Documentos válidos
+* Conductor autorizado
+* Riesgo bajo
+  👉 Resultado: **APPROVED + generación de ticket**
+
+---
+
+### ⚠️ Caso observado
+
+* Documentación incompleta
+* Inconsistencias en datos
+  👉 Resultado: **OBSERVED + notificación**
+
+---
+
+### ❌ Caso rechazado
+
+* Conductor no autorizado
+* Riesgo alto (fatiga / GPS / historial)
+  👉 Resultado: **REJECTED + alerta**
+
+---
+
+👉 Esto simula comportamiento real en sistemas logísticos críticos.
 
 ---
 
