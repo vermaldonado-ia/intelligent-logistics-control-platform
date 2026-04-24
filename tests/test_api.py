@@ -2,7 +2,6 @@ from fastapi.testclient import TestClient
 
 from app.api import app
 
-
 client = TestClient(app)
 
 
@@ -32,4 +31,3 @@ def test_evaluate_operation():
     response = client.post("/evaluate", json=payload)
     assert response.status_code == 200
     assert response.json()["operation_status"] == "APPROVED"
-    
