@@ -33,12 +33,12 @@ def assess_risk(data: Dict[str, Any]) -> Dict[str, Any]:
         observations.append("Vehicle is in a high-risk GPS zone")
 
     if previous_incidents >= 1:
-        risk_score += 15
-        observations.append("Previous operational incidents detected")
+    risk_score += 15
+    observations.append("Previous incidents detected")
 
     if previous_incidents >= 3:
-        risk_score += 15
-        observations.append("High number of previous incidents")
+    risk_score += 15
+    observations.append("Incident frequency is high")
 
     if cargo_value > 100000:
         risk_score += 20
