@@ -1,7 +1,7 @@
 🚀 Intelligent Logistics Control Platform  
 
 ![CI](https://github.com/vermaldonado-ia/intelligent-logistics-control-platform/actions/workflows/ci.yml/badge.svg)
-![Sonar Quality Gate](https://img.shields.io/badge/Quality%20Gate-Passed-brightgreen)
+![Quality Gate](https://img.shields.io/badge/Quality%20Gate-Passed-brightgreen)
 ![Coverage](https://img.shields.io/badge/Coverage-90%25-green)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 
@@ -126,10 +126,37 @@ La API fue validada mediante pruebas reales en Swagger, simulando distintos esce
 
 A continuación se presentan resultados reales ejecutados desde Swagger:
 
-- Caso 1: rejected_documents.png  
-- Caso 2: rejected_access.png  
-- Caso 3: high_risk.png  
-- Caso 4: approved.png  
+- Caso 1: rejected_documents.png
+  
+  ### 📸 Evidencia de ejecución (Swagger)
+
+| Caso | Resultado | Evidencia |
+|------|----------|----------|
+| Documentos faltantes | REJECTED | ![Caso1](diagrams/rejected_documents.png) |
+
+- Caso 2: rejected_access.png
+
+  ### 📸 Evidencia de ejecución (Swagger)
+
+| Caso | Resultado | Evidencia |
+|------|----------|----------|
+| Acceso inválido | REJECTED | ![Caso2](docs/rejected_access.png) |
+
+- Caso 3: high_risk.png
+
+  ### 📸 Evidencia de ejecución (Swagger)
+
+| Caso | Resultado | Evidencia |
+|------|----------|----------|
+| Riesgo alto | REVIEW_REQUIRED | ![Caso3](docs/high_risk.png) |
+
+- Caso 4: approved.png
+  
+### 📸 Evidencia de ejecución (Swagger)
+
+| Caso | Resultado | Evidencia |
+|------|----------|----------|
+| Operación válida | APPROVED | ![Caso4](docs/approved.png) |
 
 👉 Estas evidencias demuestran el comportamiento real del sistema.
 
@@ -190,8 +217,6 @@ A continuación se presentan resultados reales ejecutados desde Swagger:
 ---
 
 👉 Estos escenarios demuestran la capacidad del sistema para simular decisiones operacionales en contextos logísticos reales.
-
-El sistema contempla distintos escenarios operacionales:
 
 ### ✔️ Caso aprobado
 
