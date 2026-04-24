@@ -57,6 +57,32 @@ Se desarrolló una API que simula un **motor de decisiones inteligente**, capaz 
 
 ---
 
+## 🏗️ Arquitectura de la solución
+
+La solución está diseñada bajo un enfoque modular, separando responsabilidades en capas:
+
+* **API Layer** → exposición de endpoints (FastAPI)
+* **Orchestration Layer** → lógica de decisión central
+* **Services Layer** → reglas de negocio desacopladas
+
+### Componentes principales
+
+```bash
+app/
+├── api.py                # API FastAPI
+├── orchestrator.py       # Motor de decisiones
+└── services/             # Lógica de negocio
+```
+
+👉 Este diseño permite:
+
+* Escalabilidad
+* Mantenibilidad
+* Separación de responsabilidades
+* Evolución hacia microservicios
+
+---
+
 ## 🏗️ Arquitectura
 
 ```bash
@@ -74,6 +100,19 @@ tests/                    # Pruebas automatizadas
 sample_data/              # Datos de prueba
 diagrams/                 # Diagramas de flujo
 ```
+
+---
+
+## 🧠 Enfoque Arquitectónico
+
+Este proyecto demuestra:
+
+* Diseño de soluciones orientadas a negocio
+* Orquestación de lógica compleja
+* Separación de responsabilidades (services layer)
+* Testing automatizado
+* Integración CI/CD
+* Control de calidad continuo
 
 ---
 
@@ -235,19 +274,6 @@ Acceder a:
 ```
 http://127.0.0.1:8000/docs
 ```
-
----
-
-## 🧠 Enfoque Arquitectónico
-
-Este proyecto demuestra:
-
-* Diseño de soluciones orientadas a negocio
-* Orquestación de lógica compleja
-* Separación de responsabilidades (services layer)
-* Testing automatizado
-* Integración CI/CD
-* Control de calidad continuo
 
 ---
 
