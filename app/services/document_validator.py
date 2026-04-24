@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import Dict, List, Any
+from typing import Any, Dict, List
 
 REQUIRED_DOCUMENTS = [
     "driver_license",
@@ -38,12 +38,14 @@ def validate_documents(data: Dict[str, Any]) -> Dict[str, Any]:
             continue
 
         is_present = doc_info.get("present", False)
-        expiry_date = doc_info.get("expiry_date")
 
         if not is_present:
             issues.append(f"Document not present: {doc_name}")
+            continue
 
+        expiry_date = doc_info.get("expiry_date")
         parsed_expiry = _parse_date(expiry_date)
+
         if parsed_expiry is None:
             issues.append(f"Invalid expiry date format for: {doc_name}")
             continue
