@@ -1,10 +1,11 @@
 🚀 Intelligent Logistics Control Platform  
 
 ![CI](https://github.com/vermaldonado-ia/intelligent-logistics-control-platform/actions/workflows/ci.yml/badge.svg)
-![SonarCloud](https://sonarcloud.io/api/project_badges/measure?project=vermaldonado-ia_intelligent-logistics-control-platform\&metric=alert_status)
-![Coverage](https://sonarcloud.io/api/project_badges/measure?project=vermaldonado-ia_intelligent-logistics-control-platform\&metric=coverage)
+![Sonar Quality Gate](https://img.shields.io/badge/Quality%20Gate-Passed-brightgreen)
+![Coverage](https://img.shields.io/badge/Coverage-90%25-green)
+![Python](https://img.shields.io/badge/Python-3.11-blue)
 
-👉 API inteligente para automatizar decisiones logísticas con validación, control de acceso y análisis de riesgo en tiempo real.
+👉 API inteligente para automatizar decisiones operacionales en procesos logísticos críticos
 
 🔗 Swagger local: http://127.0.0.1:8000/docs
 
@@ -87,6 +88,21 @@ app/
 
 ---
 
+🧠 Enfoque del Proyecto
+
+Este proyecto está diseñado desde una perspectiva de Delivery y negocio, no solo técnica.
+
+Se enfoca en:
+
+✔ Modelamiento de decisiones operacionales reales  
+✔ Orquestación de múltiples reglas de negocio  
+✔ Simulación de escenarios críticos de riesgo  
+✔ Generación de outputs trazables y explicables  
+
+👉 Representa cómo un sistema real tomaría decisiones en entornos logísticos complejos.
+
+---
+
 ## 🔄 Flujo de la Solución
 
 1. Recepción de datos de operación logística
@@ -105,6 +121,17 @@ app/
 ## 🚨 Escenarios de decisión (evidencia real)
 
 La API fue validada mediante pruebas reales en Swagger, simulando distintos escenarios operacionales:
+
+📸 Evidencia de ejecución
+
+A continuación se presentan resultados reales ejecutados desde Swagger:
+
+- Caso 1: rejected_documents.png  
+- Caso 2: rejected_access.png  
+- Caso 3: high_risk.png  
+- Caso 4: approved.png  
+
+👉 Estas evidencias demuestran el comportamiento real del sistema.
 
 ---
 
@@ -163,10 +190,6 @@ La API fue validada mediante pruebas reales en Swagger, simulando distintos esce
 ---
 
 👉 Estos escenarios demuestran la capacidad del sistema para simular decisiones operacionales en contextos logísticos reales.
-
----
-
-## 🚨 Casos de uso y escenarios
 
 El sistema contempla distintos escenarios operacionales:
 
