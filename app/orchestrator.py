@@ -1,10 +1,10 @@
-from typing import Dict, Any, List
+from typing import Any, Dict, List
 
-from app.services.document_validator import validate_documents
 from app.services.access_control import evaluate_access
+from app.services.document_validator import validate_documents
+from app.services.notification_service import send_notification
 from app.services.risk_assessor import assess_risk
 from app.services.ticket_generator import generate_ticket
-from app.services.notification_service import send_notification
 
 
 def process_operation(data: Dict[str, Any]) -> Dict[str, Any]:
