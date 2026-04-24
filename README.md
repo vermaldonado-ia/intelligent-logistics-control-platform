@@ -118,44 +118,31 @@ Se enfoca en:
 
 ---
 
-## 🚨 Escenarios de decisión (evidencia real)
+🚨 Escenarios de decisión (evidencia real)
 
 La API fue validada mediante pruebas reales en Swagger, simulando distintos escenarios operacionales:
 
-📸 Evidencia de ejecución
+❌ Caso 1: Rechazo por documentos faltantes  
+👉 Resultado: "operation_status": "REJECTED"
 
-A continuación se presentan resultados reales ejecutados desde Swagger:
+❌ Caso 2: Documento expirado  
+👉 Resultado: "operation_status": "REJECTED"
 
-- Caso 1: rejected_documents.png
-  
-  ### 📸 Evidencia de ejecución (Swagger)
+⚠️ Caso 3: Riesgo alto  
+👉 Resultado: "operation_status": "REVIEW_REQUIRED"
 
-| Caso | Resultado | Evidencia |
-|------|----------|----------|
-| Documentos faltantes | REJECTED | ![Caso1](diagrams/rejected_documents.png) |
+✔️ Caso 4: Operación aprobada  
+👉 Resultado: "operation_status": "APPROVED"
 
-- Caso 2: rejected_access.png
+---
 
-  ### 📸 Evidencia de ejecución (Swagger)
-
-| Caso | Resultado | Evidencia |
-|------|----------|----------|
-| Acceso inválido | REJECTED | ![Caso2](docs/rejected_access.png) |
-
-- Caso 3: high_risk.png
-
-  ### 📸 Evidencia de ejecución (Swagger)
-
-| Caso | Resultado | Evidencia |
-|------|----------|----------|
-| Riesgo alto | REVIEW_REQUIRED | ![Caso3](docs/high_risk.png) |
-
-- Caso 4: approved.png
-  
 ### 📸 Evidencia de ejecución (Swagger)
 
 | Caso | Resultado | Evidencia |
 |------|----------|----------|
+| Documentos faltantes | REJECTED | ![Caso1](docs/rejected_documents.png) |
+| Acceso inválido | REJECTED | ![Caso2](docs/rejected_access.png) |
+| Riesgo alto | REVIEW_REQUIRED | ![Caso3](docs/high_risk.png) |
 | Operación válida | APPROVED | ![Caso4](docs/approved.png) |
 
 👉 Estas evidencias demuestran el comportamiento real del sistema.
@@ -411,7 +398,7 @@ Esta solución simula un escenario real donde:
 ✔ Reducción de exposición a riesgos operacionales  
 ✔ Mejora en tiempos de validación y toma de decisiones  
 ✔ Incremento en trazabilidad y control operacional  
-✔ Base para automatización de procesos logísticos críticos   
+✔ Base para automatización de procesos logísticos críticos  
 
 ---
 
