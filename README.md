@@ -145,64 +145,6 @@ La API fue validada mediante pruebas reales en Swagger, simulando distintos esce
 | Riesgo alto | REVIEW_REQUIRED | ![Caso3](diagrams/high_risk.png) |
 | Operación válida | APPROVED | ![Caso4](diagrams/approved.png) |
 
-👉 Estas evidencias demuestran el comportamiento real del sistema.
-
----
-
-### ❌ Caso 1: Rechazo por documentos faltantes
-
-* Documentos requeridos ausentes
-* Acceso no autorizado
-
-👉 Resultado:
-
-```json
-"operation_status": "REJECTED"
-```
-
----
-
-### ❌ Caso 2: Documento expirado
-
-* Licencia vencida
-* Acceso permitido pero inválido documentalmente
-
-👉 Resultado:
-
-```json
-"operation_status": "REJECTED"
-```
-
----
-
-### ⚠️ Caso 3: Riesgo alto
-
-* Fatiga del conductor
-* Zona GPS de alto riesgo
-* Historial de incidentes
-
-👉 Resultado:
-
-```json
-"operation_status": "REVIEW_REQUIRED"
-```
-
----
-
-### ✔️ Caso 4: Operación aprobada
-
-* Documentación válida
-* Acceso autorizado
-* Riesgo bajo
-
-👉 Resultado:
-
-```json
-"operation_status": "APPROVED"
-```
-
----
-
 👉 Estos escenarios demuestran la capacidad del sistema para simular decisiones operacionales en contextos logísticos reales.
 
 ### ✔️ Caso aprobado
