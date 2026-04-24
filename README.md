@@ -147,33 +147,6 @@ La API fue validada mediante pruebas reales en Swagger, simulando distintos esce
 
 👉 Estos escenarios demuestran la capacidad del sistema para simular decisiones operacionales en contextos logísticos reales.
 
-### ✔️ Caso aprobado
-
-* Documentos válidos
-* Conductor autorizado
-* Riesgo bajo
-  👉 Resultado: **APPROVED + generación de ticket**
-
----
-
-### ⚠️ Caso observado
-
-* Documentación incompleta
-* Inconsistencias en datos
-  👉 Resultado: **OBSERVED + notificación**
-
----
-
-### ❌ Caso rechazado
-
-* Conductor no autorizado
-* Riesgo alto (fatiga / GPS / historial)
-  👉 Resultado: **REJECTED + alerta**
-
----
-
-👉 Esto simula comportamiento real en sistemas logísticos críticos.
-
 ---
 
 ## 🔌 Endpoints
