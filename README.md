@@ -189,6 +189,40 @@ pytest --cov=app
 
 ---
 
+## ⚙️ Integración CI/CD y Calidad
+
+Este proyecto incorpora un pipeline automatizado de integración continua (CI) utilizando GitHub Actions.
+
+### ✔️ Validaciones automáticas
+
+* Ejecución de tests con Pytest
+* Análisis de código con Flake8
+* Formateo con Black
+* Generación de cobertura de código
+* Análisis de calidad con SonarCloud
+
+### 🔄 Flujo del pipeline
+
+```text
+Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud → Resultado
+```
+
+👉 Esto permite asegurar calidad desde etapas tempranas del desarrollo.
+
+---
+
+## 📊 Evidencia del pipeline
+
+El proyecto cuenta con ejecución real de pipeline CI y análisis de calidad:
+
+* ✔️ CI Pipeline ejecutándose en cada commit
+* ✔️ Quality Gate validado con SonarCloud
+* ✔️ Cobertura de código integrada
+
+👉 Ver en pestaña **Actions** del repositorio.
+
+---
+
 ## 🚀 Ejecución local
 
 ```bash
