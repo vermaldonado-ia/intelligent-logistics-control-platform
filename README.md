@@ -345,10 +345,14 @@ Esta solución simula un escenario real donde:
 
 ## 🚀 Próximos pasos
 
-* Deploy en cloud (AWS / Azure / Render)
-* Integración con servicios externos (APIs reales)
-* Incorporación de IA para scoring de riesgo
-* Evolución hacia arquitectura distribuida
+Este proyecto puede evolucionar hacia una solución más robusta incorporando:
+
+✔ Integración con APIs reales de validación documental, transporte o comercio exterior  
+✔ Modelos de IA para scoring predictivo de riesgo operacional  
+✔ Arquitectura distribuida basada en microservicios  
+✔ Integración con datos IoT/GPS para monitoreo de ruta, fatiga y alertas operacionales  
+
+> Estos puntos representan una evolución futura del MVP y no forman parte del alcance actual implementado.
 
 ---
 
