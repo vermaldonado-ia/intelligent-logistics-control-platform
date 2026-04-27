@@ -2,7 +2,7 @@
 
 ![CI](https://github.com/vermaldonado-ia/intelligent-logistics-control-platform/actions/workflows/ci.yml/badge.svg)
 ![Quality Gate](https://img.shields.io/badge/Quality%20Gate-Passed-brightgreen)
-![Coverage](https://img.shields.io/badge/Coverage-90%25-green)
+![Coverage](https://img.shields.io/badge/Coverage-85%25-green)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 
 👉 Plataforma desplegada en producción que simula decisiones operacionales en procesos logísticos críticos, integrando validación documental, control de acceso y análisis de riesgo en tiempo real.
@@ -310,12 +310,6 @@ Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud → Resul
 ---
 
 ## 🚀 Ejecución local
-
-Crear y activar entorno virtual:
-
-```bash
-python3 -m venv venv
-source venv/bin/activate
 
 Crear Entorno Virtual:
 
