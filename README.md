@@ -7,7 +7,33 @@
 
 👉 API inteligente para automatizar decisiones operacionales en procesos logísticos críticos
 
-🔗 Swagger local: http://127.0.0.1:8000/docs
+## 🚀 API en Producción (Cloud Deployment)
+
+La API se encuentra desplegada en un entorno cloud real utilizando Render, con integración continua desde GitHub.
+
+🔗 Swagger en producción:
+https://intelligent-logistics-control-platform.onrender.com/docs
+
+### Características del despliegue
+
+✔ Deploy automático desde GitHub  
+✔ Runtime Python en entorno cloud  
+✔ API pública accesible  
+✔ Documentación interactiva (Swagger)  
+✔ Arquitectura lista para escalar  
+
+> Nota: el servicio utiliza free tier, por lo que puede tardar algunos segundos en iniciar si se encuentra inactivo.
+
+## 📸 Evidencia de despliegue en producción
+
+### 🔧 Servicio en Render (Live)
+![Render](diagrams/render_live.png)
+
+### 🌐 Swagger en producción
+![Swagger](diagrams/swagger_prod.png)
+
+### ⚙️ Logs de ejecución (Uvicorn)
+![Logs](diagrams/render_logs.png)
 
 ---
 
