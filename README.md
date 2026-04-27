@@ -21,7 +21,7 @@
 ## 📸 Evidencia real en producción
 
 ### 🌐 API desplegada en Render
-![Render](diagrans/render_deploy.png)
+![Render](diagrams/render.png)
 
 ### 📘 Swagger en producción
 ![Swagger](diagrams/swagger.png)
