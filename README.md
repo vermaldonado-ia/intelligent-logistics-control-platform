@@ -317,10 +317,10 @@ python -m venv venv
 
 Activar Enorno Virtual:
 
-# macOS / Linux
+### macOS / Linux
 source venv/bin/activate
 
-# Windows
+### Windows
 venv\Scripts\activate
 
 Instalar dependencias: 
@@ -334,6 +334,25 @@ python -m uvicorn app.api:app --reload
 Ejecutar Swagger Local:
 
 🔗 http://127.0.0.1:8000/docs
+
+---
+
+
+---
+
+### 4. Cuidado con “tiempo real”
+
+Usas:
+
+> análisis de riesgo en tiempo real  
+> decisiones en tiempo real
+
+Como headhunter, yo lo suavizaría, porque el sistema es una simulación/API MVP, no necesariamente procesamiento real-time con streaming, sensores o eventos en vivo.
+
+Mejor:
+
+```md
+análisis de riesgo operacional mediante reglas automatizadas
 
 ---
 
