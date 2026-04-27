@@ -1,11 +1,11 @@
-🚀 Intelligent Logistics Control Platform  
+# 🚀 Intelligent Logistics Control Platform
+
+> Plataforma desplegada en producción que simula decisiones operacionales en procesos logísticos críticos, integrando validación documental, control de acceso y análisis de riesgo operacional.
 
 ![CI](https://github.com/vermaldonado-ia/intelligent-logistics-control-platform/actions/workflows/ci.yml/badge.svg)
 ![Quality Gate](https://img.shields.io/badge/Quality%20Gate-Passed-brightgreen)
 ![Coverage](https://img.shields.io/badge/Coverage-85%25-green)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
-
-👉 Plataforma desplegada en producción que simula decisiones operacionales en procesos logísticos críticos, integrando validación documental, control de acceso y análisis de riesgo en tiempo real.
 
 🔗 API en producción: https://intelligent-logistics-control-platform.onrender.com
 
@@ -334,9 +334,6 @@ python -m uvicorn app.api:app --reload
 Ejecutar Swagger Local:
 
 🔗 http://127.0.0.1:8000/docs
-
----
-
 
 ---
 
