@@ -301,19 +301,45 @@ Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud → Resul
 
 ![Coverage](diagrams/sonar_coverage.png)  
 
+✔ Quality Gate: Passed  
+✔ Coverage: ~85%  
+✔ Maintainability: A  
+✔ Reliability: A  
+✔ Security: A  
+
 ---
 
 ## 🚀 Ejecución local
 
+Crear y activar entorno virtual:
+
 ```bash
+python3 -m venv venv
+source venv/bin/activate
+
+Crear Entorno Virtual:
+
+python -m venv venv
+
+Activar Enorno Virtual:
+
+# macOS / Linux
+source venv/bin/activate
+
+# Windows
+venv\Scripts\activate
+
+Instalar dependencias: 
+
 pip install -r requirements.txt
+
+Ejecutar API:
+
 python -m uvicorn app.api:app --reload
-```
 
-Acceder a:
+Ejecutar Swagger Local:
 
-🔗 Swagger local (ejecución en entorno de desarrollo):
-http://127.0.0.1:8000/docs
+🔗 http://127.0.0.1:8000/docs
 
 ---
 
