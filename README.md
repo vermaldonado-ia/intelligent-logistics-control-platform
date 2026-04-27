@@ -7,41 +7,32 @@
 
 👉 API inteligente para automatizar decisiones operacionales en procesos logísticos críticos
 
-## 🚀 API en Producción
+🚀 Intelligent Logistics Control Platform
 
-🔗 Swagger:
-https://intelligent-logistics-control-platform.onrender.com/docs
+👉 Plataforma desplegada en producción que simula decisiones operacionales en procesos logísticos críticos, integrando validación documental, control de acceso y análisis de riesgo en tiempo real.
 
-🔗 Base URL:
-https://intelligent-logistics-control-platform.onrender.com
-
-✔ Despliegue automático desde GitHub  
-✔ API pública  
-✔ Documentación interactiva  
-✔ Runtime en cloud  
-
-> Nota: el servicio utiliza free tier, puede tardar unos segundos en iniciar.
-
-### Características del despliegue
+🔗 API en producción: https://intelligent-logistics-control-platform.onrender.com
+🔗 Swagger: https://intelligent-logistics-control-platform.onrender.com/docs
 
 ✔ Deploy automático desde GitHub  
-✔ Runtime Python en entorno cloud  
 ✔ API pública accesible  
-✔ Documentación interactiva (Swagger)  
-✔ Arquitectura lista para escalar  
+✔ Documentación interactiva  
+✔ Runtime en cloud
 
-> Nota: el servicio utiliza free tier, por lo que puede tardar algunos segundos en iniciar si se encuentra inactivo.
+⚠️ Nota: al estar en free tier, puede tardar unos segundos en iniciar.
 
 ## 📸 Evidencia de despliegue en producción
 
-### 🔧 Servicio en Render (Live)
-![Render](diagrams/render_live.png)
+## 📸 Evidencia real en producción
 
-### 🌐 Swagger en producción
-![Swagger](diagrams/swagger_prod.png)
+### 🌐 API desplegada en Render
+![Render](docs/render_deploy.png)
 
-### ⚙️ Logs de ejecución (Uvicorn)
-![Logs](diagrams/render_logs.png)
+### 📘 Swagger en producción
+![Swagger](docs/swagger.png)
+
+### ⚙️ Logs de ejecución
+![Logs](docs/logs.png)
 
 ---
 
@@ -80,6 +71,17 @@ En operaciones logísticas reales existen múltiples puntos críticos:
 * Continuidad del servicio
 * Trazabilidad
 * Eficiencia del proceso
+
+---
+
+## 📊 Antes vs Después
+
+| Antes | Después |
+|------|--------|
+| Validaciones manuales | Validación automatizada |
+| Procesos lentos | Decisiones en tiempo real |
+| Alto riesgo operativo | Evaluación automatizada de riesgo |
+| Baja trazabilidad | Trazabilidad completa de decisiones |
 
 ---
 
