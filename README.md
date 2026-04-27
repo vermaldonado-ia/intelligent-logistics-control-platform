@@ -5,10 +5,6 @@
 ![Coverage](https://img.shields.io/badge/Coverage-90%25-green)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 
-👉 API inteligente para automatizar decisiones operacionales en procesos logísticos críticos
-
-🚀 Intelligent Logistics Control Platform
-
 👉 Plataforma desplegada en producción que simula decisiones operacionales en procesos logísticos críticos, integrando validación documental, control de acceso y análisis de riesgo en tiempo real.
 
 🔗 API en producción: https://intelligent-logistics-control-platform.onrender.com
