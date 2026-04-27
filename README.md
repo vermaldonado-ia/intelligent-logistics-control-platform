@@ -7,12 +7,20 @@
 
 👉 API inteligente para automatizar decisiones operacionales en procesos logísticos críticos
 
-## 🚀 API en Producción (Cloud Deployment)
+## 🚀 API en Producción
 
-La API se encuentra desplegada en un entorno cloud real utilizando Render, con integración continua desde GitHub.
-
-🔗 Swagger en producción:
+🔗 Swagger:
 https://intelligent-logistics-control-platform.onrender.com/docs
+
+🔗 Base URL:
+https://intelligent-logistics-control-platform.onrender.com
+
+✔ Despliegue automático desde GitHub  
+✔ API pública  
+✔ Documentación interactiva  
+✔ Runtime en cloud  
+
+> Nota: el servicio utiliza free tier, puede tardar unos segundos en iniciar.
 
 ### Características del despliegue
 
@@ -353,6 +361,20 @@ Este proyecto puede evolucionar hacia una solución más robusta incorporando:
 ✔ Integración con datos IoT/GPS para monitoreo de ruta, fatiga y alertas operacionales  
 
 > Estos puntos representan una evolución futura del MVP y no forman parte del alcance actual implementado.
+
+---
+
+## 🎯 Valor diferencial del proyecto
+
+Este proyecto no solo demuestra habilidades técnicas, sino capacidad de:
+
+✔ Diseñar soluciones orientadas a negocio  
+✔ Modelar procesos operacionales reales  
+✔ Implementar automatización de decisiones  
+✔ Integrar prácticas DevOps (CI/CD + despliegue)  
+✔ Entregar soluciones desplegadas en producción  
+
+👉 Representa el rol de un Delivery Manager en entornos tecnológicos modernos.
 
 ---
 
