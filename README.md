@@ -8,6 +8,7 @@
 👉 Plataforma desplegada en producción que simula decisiones operacionales en procesos logísticos críticos, integrando validación documental, control de acceso y análisis de riesgo en tiempo real.
 
 🔗 API en producción: https://intelligent-logistics-control-platform.onrender.com
+
 🔗 Swagger: https://intelligent-logistics-control-platform.onrender.com/docs
 
 ✔ Deploy automático desde GitHub  
