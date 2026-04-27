@@ -18,8 +18,6 @@
 
 ⚠️ Nota: al estar en free tier, puede tardar unos segundos en iniciar.
 
-## 📸 Evidencia de despliegue en producción
-
 ## 📸 Evidencia real en producción
 
 ### 🌐 API desplegada en Render
@@ -283,33 +281,25 @@ pytest --cov=app
 
 Este proyecto incorpora un pipeline automatizado de integración continua (CI) utilizando GitHub Actions.
 
-### ✔️ Validaciones automáticas
+✔️ Ejecución de tests con Pytest  
+✔️ Análisis de código con Flake8  
+✔️ Formateo con Black  
+✔️ Generación de cobertura  
+✔️ Análisis de calidad con SonarCloud  
 
-* Ejecución de tests con Pytest
-* Análisis de código con Flake8
-* Formateo con Black
-* Generación de cobertura de código
-* Análisis de calidad con SonarCloud
+🔄 Flujo del pipeline:
 
-### 🔄 Flujo del pipeline
-
-```text
 Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud → Resultado
-```
 
-👉 Esto permite asegurar calidad desde etapas tempranas del desarrollo.
+## 📊 Evidencia de Calidad (SonarCloud)
 
----
+### 🔍 Quality Gate
 
-## 📊 Evidencia del pipeline
+![Quality Gate](diagrams/sonar_quality_gate.png)
 
-El proyecto cuenta con ejecución real de pipeline CI y análisis de calidad:
+### 📈 Cobertura de código
 
-* ✔️ CI Pipeline ejecutándose en cada commit
-* ✔️ Quality Gate validado con SonarCloud
-* ✔️ Cobertura de código integrada
-
-👉 Ver en pestaña **Actions** del repositorio.
+![Coverage](diagrams/sonar_coverage.png)  
 
 ---
 
@@ -329,24 +319,13 @@ http://127.0.0.1:8000/docs
 
 ## 📈 Valor para el negocio
 
-Esta solución simula un escenario real donde:
+Esta solución simula un escenario real donde una organización logística puede:
 
-* Se reduce el riesgo de acceso no autorizado
-* Se mejora la toma de decisiones operacionales
-* Se automatiza la validación documental
-* Se incrementa la trazabilidad del proceso
-
-👉 Base directa para sistemas de:
-
-* Control portuario
-* Transporte terrestre
-* Aduanas / comercio exterior
-* Plataformas logísticas inteligentes
-
-✔ Reducción de exposición a riesgos operacionales  
-✔ Mejora en tiempos de validación y toma de decisiones  
-✔ Incremento en trazabilidad y control operacional  
-✔ Base para automatización de procesos logísticos críticos  
+✔ Reducir exposición a riesgos operacionales  
+✔ Mejorar tiempos de validación y toma de decisiones  
+✔ Automatizar validación documental  
+✔ Incrementar trazabilidad y control operacional  
+✔ Sentar una base para sistemas de control portuario, transporte terrestre y comercio exterior    
 
 ---
 
