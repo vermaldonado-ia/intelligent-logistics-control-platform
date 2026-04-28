@@ -149,3 +149,16 @@ El Product Backlog se deriva directamente del roadmap del producto, donde cada M
 
 - MVP1 → Backlog actual implementado
 - MVP2+ → Backlog futuro (no implementado aún)
+
+---
+
+## 📊 Product Backlog (MVP1)
+
+| Épica | Historia de Usuario | Estado |
+|------|--------------------|--------|
+| Validación Documental | Validar documentos de transporte | ✔ Done |
+| Control de Acceso | Validar conductor y camión | ✔ Done |
+| Evaluación de Riesgo | Evaluar GPS y fatiga | ✔ Done |
+| Orquestación | Integrar validaciones | ✔ Done |
+| Ticketing | Generar ticket | ✔ Done |
+| API | Exponer endpoint | ✔ Done |
