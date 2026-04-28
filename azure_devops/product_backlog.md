@@ -1,4 +1,4 @@
-# 📊 Product Management — Intelligent Logistics Control Platform
+# 📊 Product Backlog — Intelligent Logistics Control Platform
 
 ## 🎯 Visión del Producto
 
@@ -140,3 +140,12 @@ La gestión del backlog se realizó utilizando Azure DevOps, permitiendo:
 - Priorización por valor de negocio
 - Reducción de riesgo temprano
 - Entrega continua de valor
+
+---
+
+## 🔗 Relación con el Roadmap
+
+El Product Backlog se deriva directamente del roadmap del producto, donde cada MVP se descompone en épicas, historias de usuario y tareas técnicas.
+
+- MVP1 → Backlog actual implementado
+- MVP2+ → Backlog futuro (no implementado aún)
