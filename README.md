@@ -183,10 +183,10 @@ La API fue validada mediante pruebas reales en Swagger, simulando distintos esce
 
 | Caso                 | Resultado       | Evidencia                             |
 | -------------------- | --------------- | ------------------------------------- |
-| Documentos faltantes | REJECTED        | ![Caso1](docs/rejected_documents.png) |
-| Acceso inválido      | REJECTED        | ![Caso2](docs/rejected_access.png)    |
-| Riesgo alto          | REVIEW_REQUIRED | ![Caso3](docs/high_risk.png)          |
-| Operación válida     | APPROVED        | ![Caso4](docs/approved.png)           |
+| Documentos faltantes | REJECTED        | ![Caso1](diagrams/rejected_documents.png) |
+| Acceso inválido      | REJECTED        | ![Caso2](diagrams/rejected_access.png)    |
+| Riesgo alto          | REVIEW_REQUIRED | ![Caso3](diagrams/high_risk.png)          |
+| Operación válida     | APPROVED        | ![Caso4](diagrams/approved.png)           |
 
 👉 Estos escenarios demuestran la capacidad del sistema para simular decisiones operacionales en contextos logísticos reales.
 
