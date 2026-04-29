@@ -411,6 +411,23 @@ El desarrollo del producto se estructura en entregas incrementales (MVPs), permi
 Validar el flujo completo de decisiones operacionales en un entorno simulado, integrando múltiples validaciones y exponiendo resultados a través de una API.
 
 ---
+
+## 📊 Gestión del Delivery
+
+El desarrollo del proyecto fue gestionado utilizando Azure DevOps, aplicando prácticas de gestión ágil orientadas a entrega de valor.
+
+Se implementó:
+
+* Gestión de backlog estructurado en épicas, historias y tareas
+* Priorización basada en valor de negocio
+* Control de flujo mediante tablero Kanban
+* Seguimiento del avance del MVP
+
+📌 Esto permitió asegurar trazabilidad completa entre requerimientos, desarrollo y entrega.
+
+🔗 Ver evidencia completa:
+👉 ./azure_devops/boards_evidencia.md
+
 ---
 
 ## 👩‍💻 Autor
