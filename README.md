@@ -91,6 +91,7 @@ app/
 
 ## ⚙️ Ejecución en Entorno de Desarrollo
 
+```bash
 git clone https://github.com/vermaldonado-ia/intelligent-logistics-control-platform.git
 cd intelligent-logistics-control-platform
 pip install -r requirements.txt
