@@ -402,7 +402,7 @@ Proyecto gestionado con Azure DevOps:
 
 👉 Ver trazabilidad completa del backlog y ejecución del proyecto:
 
-🔗 Ver evidencia Azure DevOps: ./azure_devops/boards_evidencia.md
+🔗 Ver evidencia Azure DevOps: [./azure_devops/boards_evidencia.md](https://dev.azure.com/veronicabmaldonado/intelligent-logistics-control-platform/_boards/board/t/intelligent-logistics-control-platform%20Team/Stories)
 
 
 ---
