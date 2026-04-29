@@ -49,12 +49,12 @@ Al estar en free tier, la aplicación puede tardar unos segundos en iniciar.
 ## 📸 Evidencia real en producción
 
 ### 🌐 API desplegada en Render
-![API](diagrams/api_production.png)
+![API](diagrams/render.png)
 
 ---
 
 ### 📘 Swagger en producción
-![Swagger](diagrams/swagger_production.png)
+![Swagger](diagrams/swagger.png)
 
 ---
 
