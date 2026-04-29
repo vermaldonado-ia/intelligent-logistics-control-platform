@@ -48,9 +48,18 @@ Al estar en free tier, la aplicación puede tardar unos segundos en iniciar.
 
 ## 📸 Evidencia real en producción
 
-🌐 API desplegada en Render
-📘 Swagger en producción
-⚙️ Logs de ejecución
+### 🌐 API desplegada en Render
+![API](diagrams/api_production.png)
+
+---
+
+### 📘 Swagger en producción
+![Swagger](diagrams/swagger_production.png)
+
+---
+
+### ⚙️ Logs de ejecución
+![Logs](diagrams/logs.png)
 
 ---
 
