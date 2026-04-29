@@ -20,7 +20,7 @@ Se implementó una gestión completa del backlog utilizando Azure DevOps, asegur
 
 ## 🔧 Tareas asociadas
 
-![Tareas](../diagrams/tarea_por_historia.png)
+![Tareas](../diagrams/tareas_por_historia.png)
 
 ---
 
