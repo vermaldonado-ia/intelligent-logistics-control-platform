@@ -392,12 +392,6 @@ Este proyecto no solo demuestra habilidades técnicas, sino capacidad de:
 
 ---
 
-## 🎯 Visión del Producto
-
-Construir una plataforma inteligente que permita automatizar decisiones operacionales en procesos logísticos, integrando validación documental, control de acceso, evaluación de riesgos y trazabilidad en tiempo real.
-
----
-
 ## 🚀 Estrategia de Desarrollo
 
 El desarrollo del producto se estructura en entregas incrementales (MVPs), permitiendo validar valor de negocio de forma progresiva y controlada.
@@ -409,6 +403,10 @@ El desarrollo del producto se estructura en entregas incrementales (MVPs), permi
 ### 🎯 Objetivo
 
 Validar el flujo completo de decisiones operacionales en un entorno simulado, integrando múltiples validaciones y exponiendo resultados a través de una API.
+
+## 🎯 Visión del Producto
+
+Construir una plataforma inteligente que permita automatizar decisiones operacionales en procesos logísticos, integrando validación documental, control de acceso, evaluación de riesgos y trazabilidad en tiempo real.
 
 ---
 
