@@ -14,19 +14,19 @@ Se implementó una gestión completa del backlog utilizando Azure DevOps, asegur
 
 ## 📖 Detalle de Historia de Usuario
 
-![Historia](../docs/historia_detalle.png)
+![Historia](../diagrams/historia_detalle.png)
 
 ---
 
 ## 🔧 Tareas asociadas
 
-![Tareas](../docs/tareas_por_historia.png)
+![Tareas](../diagrams/tareas_por_historia.png)
 
 ---
 
 ## 🔄 Gestión del flujo (Kanban)
 
-![Kanban](../docs/kanban_flujo.png)
+![Kanban](../diagrams/kanban_flujo.png)
 
 ---
 
@@ -44,11 +44,11 @@ Se implementó trazabilidad completa entre la gestión del backlog y la implemen
 
 #### Gestión y planificación
 
-![Gestión](../docs/trazabilidad_gestion.png)
+![Gestión](../diagrams/trazabilidad_gestion.png)
 
 #### Ejecución técnica y vinculación a código
 
-![Técnica](../docs/trazabilidad_tecnica.png)
+![Técnica](../diagrams/trazabilidad_tecnica.png)
 
 ---
 
