@@ -404,6 +404,14 @@ Proyecto gestionado con Azure DevOps:
 
 🔗 Ver evidencia Azure DevOps: [./azure_devops/boards_evidencia.md](https://dev.azure.com/veronicabmaldonado/intelligent-logistics-control-platform/_boards/board/t/intelligent-logistics-control-platform%20Team/Stories)
 
+## 📊 Gestión de Producto
+
+La solución fue diseñada bajo un enfoque de producto, con backlog priorizado y roadmap evolutivo:
+
+- 📄 Product Backlog: ./product_backlog.md  
+- 🚀 Product Roadmap: ./product_roadmap.md  
+
+Estos documentos reflejan la estrategia de construcción del MVP, evolución de capacidades y alineación con valor de negocio.
 
 ---
 
