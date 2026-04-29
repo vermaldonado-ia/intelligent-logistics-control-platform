@@ -122,7 +122,7 @@ http://127.0.0.1:8000/docs
 * Validación en cada Pull Request
 
 📸 Evidencia:
-![CI](docs/ci-success.png)
+![CI](diagrams/ci-success.png)
 
 ---
 
@@ -132,7 +132,7 @@ http://127.0.0.1:8000/docs
 * Validación de cobertura
 
 📸 Evidencia:
-![Cobertura](docs/coverage.png)
+![Cobertura](diagrams/coverage.png)
 
 ---
 
@@ -142,7 +142,7 @@ http://127.0.0.1:8000/docs
 * Integración de control de calidad
 
 📸 Evidencia:
-![Calidad](docs/sonar_quality.png)
+![Calidad](diagrams/sonar_quality.png)
 
 ---
 
@@ -153,7 +153,7 @@ La API se encuentra desplegada en entorno cloud:
 🔗 https://logistics-api-veronica.onrender.com/docs
 
 📸 Evidencia:
-![API](docs/api_production.png)
+![API](diagrams/api_production.png)
 
 ---
 
