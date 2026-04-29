@@ -402,7 +402,7 @@ Proyecto gestionado con Azure DevOps:
 
 👉 Ver trazabilidad completa del backlog y ejecución del proyecto:
 
-🔗 Ver evidencia Azure DevOps
+🔗 Ver evidencia Azure DevOps: ./azure_devops/boards_evidencia.md
 
 
 ---
