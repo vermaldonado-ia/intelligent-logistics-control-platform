@@ -32,7 +32,7 @@ Se implementó una gestión completa del backlog utilizando Azure DevOps, asegur
 
 ## ✔ Entrega de valor (Historia completada)
 
-![Done](../docs/historia_done.png)
+![Done](../diagrams/historia_done.png)
 
 ---
 
