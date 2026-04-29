@@ -162,14 +162,14 @@ Proyecto diseñado desde una perspectiva de **negocio + delivery**, enfocado en:
 
 ---
 
-## 📸 Evidencia de ejecución
+## 📸 Evidencia de Ejecución
 
-| Caso                 | Resultado       | Evidencia |
-| -------------------- | --------------- | --------- |
-| Documentos faltantes | REJECTED        | Caso1     |
-| Acceso inválido      | REJECTED        | Caso2     |
-| Riesgo alto          | REVIEW_REQUIRED | Caso3     |
-| Operación válida     | APPROVED        | ../diagrams/approved.png     |
+| Caso | Resultado | Evidencia |
+|------|----------|-----------|
+| Documentos faltantes | REJECTED | ![Documentos faltantes](docs/rejected_documents.png) |
+| Acceso inválido | REJECTED | ![Acceso inválido](docs/rejected_access.png) |
+| Riesgo alto | REVIEW_REQUIRED | ![Riesgo alto](docs/high_risk.png) |
+| Operación válida | APPROVED | ![Operación válida](docs/approved.png) |
 
 ---
 
