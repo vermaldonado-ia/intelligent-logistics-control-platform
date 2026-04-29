@@ -112,7 +112,7 @@ La solución se basa en un flujo de validación compuesto por:
 
 📊 Flujo operacional:
 
-![Flujo Operacional](docs/flujo_operacional_general.png)
+![Flujo Operacional](diagrams/flujo_operacional_general.png)
 
 📌 Componentes principales:
 
