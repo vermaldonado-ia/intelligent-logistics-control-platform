@@ -36,46 +36,31 @@ Se implementó una gestión completa del backlog utilizando Azure DevOps, asegur
 
 ---
 
-## 🔗 Trazabilidad de elementos
+## 🔗 Trazabilidad end-to-end
 
-![Trazabilidad](../docs/trazabilidad_relaciones.png)
+Se implementó trazabilidad completa entre la gestión del backlog y la implementación técnica del sistema.
 
----
+### 📸 Evidencia de trazabilidad
 
-## 🔗 Trazabilidad técnica (DevOps → Código)
+#### Gestión y planificación
 
-Se estableció una trazabilidad entre los elementos de trabajo en Azure DevOps y la implementación técnica del proyecto.
+![Gestión](../docs/trazabilidad_gestion.png)
 
-Esto permite conectar:
+#### Ejecución técnica y vinculación a código
 
-* Historias de usuario
-* Tareas técnicas
-* Implementación en código
-
-📌 A nivel de cada historia, se integró la sección **Development**, donde se pueden asociar:
-
-* Commits
-* Repositorio de código
-
-👉 Esto asegura visibilidad completa desde la definición funcional hasta la implementación técnica.
+![Técnica](../docs/trazabilidad_tecnica.png)
 
 ---
 
-## 🚀 Conclusión
+Esto permite visualizar:
 
-La gestión implementada permite asegurar:
-
-✔ Trazabilidad end-to-end (Backlog → Desarrollo → Entrega)
-✔ Visibilidad completa del ciclo de vida del requerimiento
-✔ Alineación entre negocio y tecnología
+* Definición del requerimiento
+* Planificación del trabajo (Story Points y riesgo)
+* Ejecución mediante tareas técnicas
+* Vinculación directa con commits en GitHub
 
 ---
 
-## 🚀 Conclusión
-
-Esta estructura permitió asegurar:
-
-✔ Trazabilidad completa (Épica → Historia → Tarea → Entrega)
-✔ Control del flujo de trabajo
-✔ Priorización basada en valor
-✔ Visibilidad del avance del producto
+✔ Asegura visibilidad completa del ciclo de desarrollo
+✔ Permite seguimiento desde requerimiento hasta implementación
+✔ Refleja prácticas reales de gestión en entornos DevOps
