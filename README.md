@@ -418,7 +418,9 @@ Estos documentos reflejan la estrategia de construcción del MVP, evolución de 
 ## 👩‍💻 Autor
 
 **Verónica Maldonado Céspedes**
+
 Cloud & DevOps Delivery Manager
+
 Project Manager | Transformación Digital
 
 ---
