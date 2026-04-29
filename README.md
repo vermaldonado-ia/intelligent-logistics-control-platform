@@ -348,7 +348,6 @@ Como headhunter, yo lo suavizaría, porque el sistema es una simulación/API MVP
 
 Mejor:
 
-```md
 análisis de riesgo operacional mediante reglas automatizadas
 
 ---
