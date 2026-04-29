@@ -5,62 +5,99 @@
 ![Cobertura](https://img.shields.io/badge/Cobertura-90%25-green)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-green)
-![Estado](https://img.shields.io/badge/Estado-MVP-blue)
+![Deploy](https://img.shields.io/badge/Deploy-Render-blue)
 
 ---
 
 ## 🎯 Resumen Ejecutivo
 
-Plataforma que simula la automatización de decisiones operacionales en procesos logísticos, integrando:
+Plataforma desplegada en producción que simula decisiones operacionales en procesos logísticos críticos, integrando:
 
 * Validación documental
-* Control de acceso de camiones y conductores
-* Evaluación de riesgo logístico
+* Control de acceso
+* Evaluación de riesgo operacional
 * Orquestación de decisiones
 
-💡 **Problema de negocio**
-Los procesos manuales en logística generan:
+👉 API pública + CI/CD + Quality Gate + Deploy en Cloud
 
-* Ingreso de vehículos no autorizados
-* Fraude documental
-* Riesgo de robo de carga
-* Baja trazabilidad operacional
+---
 
-🚀 **Solución propuesta**
-Definición de un flujo integrado de decisiones expuesto mediante una API REST, permitiendo validar operaciones de forma automatizada en un entorno simulado.
+## 🔗 Accesos en Producción
+
+🔗 API en producción: https://intelligent-logistics-control-platform.onrender.com
+🔗 Swagger: https://intelligent-logistics-control-platform.onrender.com/docs
+
+✔ Deploy automático desde GitHub
+✔ API pública accesible
+✔ Documentación interactiva
+✔ Runtime en cloud
+
+⚠️ Nota: al estar en free tier, puede tardar unos segundos en iniciar.
+
+---
+
+## 📸 Evidencia real en producción
+
+🌐 API desplegada en Render
+📘 Swagger en producción
+⚙️ Logs de ejecución
 
 ---
 
 ## 👩‍💼 Rol en el proyecto
 
-Este proyecto fue desarrollado desde un enfoque de **Gestión de Entrega (Delivery Management)**, integrando:
+Este proyecto fue desarrollado desde un enfoque de **Delivery Management**, integrando:
 
 * Definición del enfoque de solución
 * Priorización de backlog y roadmap
 * Modelamiento del flujo operacional
 * Aseguramiento de calidad (testing + CI/CD)
-* Enfoque en generación de valor de negocio
+* Enfoque en valor de negocio
 
-💡 Este repositorio no busca representar una implementación técnica profunda,
-sino la capacidad de **liderar, estructurar y validar soluciones tecnológicas de extremo a extremo**.
+👉 No representa solo una implementación técnica, sino la capacidad de liderar soluciones end-to-end.
 
 ---
 
 ## 🧩 Problema de Negocio
 
-En operaciones logísticas y de comercio exterior existen múltiples puntos críticos:
+En operaciones logísticas reales existen múltiples puntos críticos:
 
-* Validaciones manuales de acceso a recintos
+* Validación manual de documentos
 * Ingreso de camiones no autorizados
-* Procesos documentales propensos a errores
-* Falta de trazabilidad en la toma de decisiones
+* Falta de control sobre conductores y vehículos
+* Evaluación tardía de riesgos operacionales
+* Procesos lentos y propensos a error
 
-👉 Esto impacta directamente en:
+👉 Impacto directo:
 
-* Seguridad operacional
+* Seguridad operativa
 * Continuidad del servicio
-* Costos operativos
-* Experiencia del cliente
+* Trazabilidad
+* Eficiencia del proceso
+
+---
+
+## 📊 Antes vs Después
+
+| Antes                 | Después                           |
+| --------------------- | --------------------------------- |
+| Validaciones manuales | Validación automatizada           |
+| Procesos lentos       | Decisiones automatizadas          |
+| Alto riesgo operativo | Evaluación automatizada de riesgo |
+| Baja trazabilidad     | Trazabilidad completa             |
+
+---
+
+## 💡 Solución
+
+Se define un flujo de decisiones automatizado que permite:
+
+✔ Validar documentación
+✔ Evaluar condiciones de acceso
+✔ Analizar riesgo operacional
+✔ Orquestar decisiones
+✔ Generar tickets
+✔ Emitir notificaciones
 
 ---
 
@@ -73,152 +110,207 @@ La solución se basa en un flujo de validación compuesto por:
 * Evaluación de riesgo
 * Orquestación de decisiones
 
+📊 Flujo operacional:
+
+![Flujo Operacional](docs/flujo_operacional_general.png)
+
 📌 Componentes principales:
 
-```bash
 app/
- ├── api.py
- ├── orchestrator.py
- └── services/
-      ├── document_validator.py
-      ├── access_control.py
-      ├── risk_assessor.py
-      ├── ticket_generator.py
-      └── notification_service.py
-```
+├── api.py
+├── orchestrator.py
+└── services/
+    ├── document_validator.py
+    ├── access_control.py
+    ├── risk_assessor.py
+    ├── ticket_generator.py
+    └── notification_service.py
+
+---
+
+## 🧠 Enfoque del Proyecto
+
+Proyecto diseñado desde una perspectiva de **negocio + delivery**, enfocado en:
+
+✔ Modelamiento de decisiones operacionales reales
+✔ Orquestación de reglas de negocio
+✔ Simulación de escenarios críticos
+✔ Generación de resultados trazables
+
+---
+
+## 🔄 Flujo de la Solución
+
+1. Recepción de datos
+2. Validación documental
+3. Evaluación de acceso
+4. Análisis de riesgo
+5. Toma de decisión
+6. Generación de ticket
+7. Notificación
+
+📌 Ver diagrama: diagrams/flujo_operacional_general.png
+
+---
+
+## 🚨 Escenarios de decisión
+
+❌ Documentos faltantes → REJECTED
+❌ Documento expirado → REJECTED
+⚠️ Riesgo alto → REVIEW_REQUIRED
+✔️ Operación válida → APPROVED
+
+---
+
+## 📸 Evidencia de ejecución
+
+| Caso                 | Resultado       | Evidencia |
+| -------------------- | --------------- | --------- |
+| Documentos faltantes | REJECTED        | Caso1     |
+| Acceso inválido      | REJECTED        | Caso2     |
+| Riesgo alto          | REVIEW_REQUIRED | Caso3     |
+| Operación válida     | APPROVED        | Caso4     |
+
+---
+
+## 🔌 Endpoints
+
+### ✔ Health Check
+
+GET /health
+
+Respuesta:
+{"status": "ok"}
+
+### ✔ Evaluación de Operación
+
+POST /evaluate
+
+---
+
+## 🧪 Pruebas y Calidad
+
+pytest -v
+pytest --cov=app
+
+✔ Integración CI
+✔ Validación de calidad
+✔ Control de cobertura
+
+---
+
+## ⚙️ Integración CI/CD y Calidad
+
+Pipeline automatizado:
+
+Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud
+
+📊 Resultados:
+
+✔ Quality Gate: Passed
+✔ Coverage: ~85%
+✔ Maintainability: A
+✔ Reliability: A
+✔ Security: A
 
 ---
 
 ## ⚙️ Ejecución en Entorno de Desarrollo
 
-```bash
 git clone https://github.com/vermaldonado-ia/intelligent-logistics-control-platform.git
 cd intelligent-logistics-control-platform
 pip install -r requirements.txt
 PYTHONPATH=. python -m uvicorn app.api:app --reload
-```
 
-**Swagger:**
+Swagger:
 http://127.0.0.1:8000/docs
 
 ---
 
-## 🧪 Casos de Validación Operativa
+## ⚙️ Tecnologías
 
-| Caso                 | Resultado          | Evidencia                             |
-| -------------------- | ------------------ | ------------------------------------- |
-| Documentos faltantes | RECHAZADO          | ![Caso1](diagrams/rejected_documents.png) |
-| Acceso inválido      | RECHAZADO          | ![Caso2](diagrams/rejected_access.png)    |
-| Riesgo alto          | REVISIÓN REQUERIDA | ![Caso3](diagrams/high_risk.png)          |
-| Operación válida     | APROBADO           | ![Caso4](diagrams/approved.png)           |
-
----
-
-## 🔍 Evidencia Técnica
-
-### ✅ Integración Continua (CI/CD)
-
-* Pipeline automatizado con GitHub Actions
-* Validación en cada Pull Request
-
-📸 Evidencia:
-![CI](diagrams/ci-success.png)
+Python
+FastAPI
+Pytest
+Flake8
+Coverage
+GitHub Actions
+SonarCloud
 
 ---
 
-### 🧪 Pruebas Automatizadas y Cobertura
+## 📈 Valor para el negocio
 
-* Pruebas con pytest
-* Validación de cobertura
-
-📸 Evidencia:
-![Cobertura](diagrams/coverage.png)
-
----
-
-### 🔎 Calidad de Código
-
-* Validación de estándares de código
-* Integración de control de calidad
-
-📸 Evidencia:
-![Calidad](diagrams/sonar_quality.png)
+✔ Reducción de riesgos
+✔ Mejora en tiempos de validación
+✔ Automatización de procesos
+✔ Mayor trazabilidad
 
 ---
 
-### 🚀 API en Producción
+## 🚀 Estrategia de Desarrollo
 
-La API se encuentra desplegada en entorno cloud:
+Desarrollo basado en MVPs incrementales.
 
-🔗 https://logistics-api-veronica.onrender.com/docs
+### 🧩 MVP1
 
-📸 Evidencia:
-![API](diagrams/api_production.png)
-
----
-
-## 📊 Gestión de Producto (Azure DevOps)
-
-La solución fue diseñada bajo un enfoque de producto, con backlog priorizado y roadmap evolutivo:
-
-* 📄 Product Backlog: ./product_backlog.md
-* 🚀 Product Roadmap: ./product_roadmap.md
-* 📸 Evidencia Board: ./azure_devops/boards_evidencia.md
-
-✔ Definición de épicas, historias y tareas
-✔ Priorización basada en valor de negocio
-✔ Trazabilidad del desarrollo
+Validación del flujo operacional completo
 
 ---
 
-## 💼 Capacidades Demostradas
+## 🎯 Visión del Producto
 
-* Liderazgo en entrega de soluciones tecnológicas
-* Definición de enfoques técnicos de solución
-* Diseño de flujos operacionales
-* Implementación de CI/CD
-* Pruebas automatizadas
-* Gestión de backlog con Azure DevOps
-* Enfoque MVP orientado a valor
+Automatizar decisiones logísticas con foco en:
+
+* Control
+* Trazabilidad
+* Reducción de riesgos
 
 ---
 
-## 📈 Impacto Esperado
+## 📊 Gestión del Delivery (Azure DevOps)
 
-* Reducción de errores manuales
-* Disminución de riesgos logísticos
-* Mejora en control de accesos
-* Incremento en trazabilidad operacional
+✔ Backlog estructurado
+✔ Historias y tareas
+✔ Priorización por valor
+✔ Tablero Kanban
+✔ Trazabilidad completa
 
----
-
-## 🚀 Hoja de Ruta
-
-Evolución del producto en fases incrementales:
-
-* MVP1: Validación del flujo operacional
-* MVP2: Integración con servicios externos
-* MVP3: Automatización avanzada
-* MVP4: Escalabilidad y analítica
+🔗 Evidencia: ./azure_devops/boards_evidencia.md
 
 ---
 
-## 🔮 Próximos Pasos
+## 📊 Gestión de Producto
 
-✔ Integración con APIs externas reales
-✔ Incorporación de modelos de IA para evaluación de riesgo
-✔ Evolución hacia arquitectura distribuida
-✔ Integración con dispositivos IoT (GPS, sensores)
+📄 Product Backlog
+🚀 Product Roadmap
+🔗 Evidencia de gestión
 
 ---
 
-## 🧠 Conclusión
+## 🚀 Próximos pasos
 
-Este proyecto demuestra la capacidad de:
+✔ Integración con APIs reales
+✔ IA para scoring de riesgo
+✔ Arquitectura distribuida
+✔ Integración con IoT
 
-* Traducir problemas de negocio en soluciones tecnológicas
-* Estructurar productos digitales desde cero
-* Integrar prácticas modernas de desarrollo
-* Validar soluciones mediante evidencia técnica
+---
 
-👉 Enfocado en un perfil de **Delivery Manager con visión técnica y de producto**.
+## 🎯 Valor diferencial
+
+✔ Diseño orientado a negocio
+✔ Automatización de decisiones
+✔ Integración DevOps
+✔ Entrega en producción
+
+👉 Representa el rol de un Delivery Manager moderno.
+
+---
+
+## 👩‍💻 Autor
+
+Verónica Maldonado Céspedes
+Cloud & DevOps Delivery Manager
+Project Manager | Transformación Digital
+
