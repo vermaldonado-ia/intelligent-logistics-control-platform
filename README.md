@@ -222,15 +222,21 @@ pytest --cov=app
 
 Pipeline automatizado:
 
-Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud
+Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud  
 
-📊 Resultados:
+---
 
-✔ Quality Gate: Passed
-✔ Coverage: ~85%
-✔ Maintainability: A
-✔ Reliability: A
-✔ Security: A
+## 📊 Evidencia de Calidad (SonarCloud)
+
+### ✔ Quality Gate
+
+![Quality Gate](docs/sonar_quality_gate.png)
+
+---
+
+### 📈 Métricas de Calidad
+
+![Sonar Overview](docs/sonar_overview.png)
 
 ---
 
