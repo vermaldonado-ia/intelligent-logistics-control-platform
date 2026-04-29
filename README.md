@@ -385,7 +385,9 @@ Construir una plataforma que automatice decisiones operacionales en procesos log
 ---
 
 📊 Gestión del Delivery
+
 Proyecto gestionado con Azure DevOps:
+
 ✔ Backlog estructurado
 ✔ Historias y tareas
 ✔ Priorización por valor
@@ -393,8 +395,11 @@ Proyecto gestionado con Azure DevOps:
 ✔ Trazabilidad completa
 
 📎 Evidencia de Gestión (Azure DevOps)
+
 👉 Ver trazabilidad completa del backlog y ejecución del proyecto:
+
 🔗 Ver evidencia Azure DevOps
+
 
 ---
 
