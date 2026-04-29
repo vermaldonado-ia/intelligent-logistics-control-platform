@@ -96,8 +96,9 @@ git clone https://github.com/vermaldonado-ia/intelligent-logistics-control-platf
 cd intelligent-logistics-control-platform
 pip install -r requirements.txt
 PYTHONPATH=. python -m uvicorn app.api:app --reload
+```
 
-Swagger:
+**Swagger:**
 http://127.0.0.1:8000/docs
 
 ---
