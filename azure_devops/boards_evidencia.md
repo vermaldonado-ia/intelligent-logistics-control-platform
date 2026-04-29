@@ -8,7 +8,7 @@ Se implementó una gestión completa del backlog utilizando Azure DevOps, asegur
 
 ## 🧱 Backlog estructurado
 
-![Backlog](../docs/backlog_estructura.png)
+![Backlog](../diagrams/backlog_estructura.png)
 
 ---
 
