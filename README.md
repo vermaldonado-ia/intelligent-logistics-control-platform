@@ -238,6 +238,9 @@ Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud
 
 ![Sonar Overview](diagrams/sonar_coverage.png)
 
+🔗 Ver en SonarCloud:
+https://sonarcloud.io/project/overview?id=vermaldonado-ia_intelligent-logistics-control-platform
+
 ---
 
 ## ⚙️ Ejecución en Entorno de Desarrollo
