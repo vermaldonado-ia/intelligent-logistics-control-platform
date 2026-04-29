@@ -169,7 +169,7 @@ Proyecto diseñado desde una perspectiva de **negocio + delivery**, enfocado en:
 | Documentos faltantes | REJECTED | ![Documentos faltantes](diagrams/rejected_documents.png) |
 | Acceso inválido | REJECTED | ![Acceso inválido](diagrams/rejected_access.png) |
 | Riesgo alto | REVIEW_REQUIRED | ![Riesgo alto](diagrams/high_risk.png) |
-| Operación válida | APPROVED | ![Operación válida](diagramss/approved.png) |
+| Operación válida | APPROVED | ![Operación válida](diagrams/approved.png) |
 
 ---
 
