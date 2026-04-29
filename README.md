@@ -91,14 +91,13 @@ app/
 
 ## ⚙️ Ejecución en Entorno de Desarrollo
 
-```bash
+git clone https://github.com/vermaldonado-ia/intelligent-logistics-control-platform.git
+cd intelligent-logistics-control-platform
 pip install -r requirements.txt
-python -m uvicorn app.api:app --reload
-```
+PYTHONPATH=. python -m uvicorn app.api:app --reload
 
-Acceder a:
-
-🔗 http://127.0.0.1:8000/docs
+Swagger:
+http://127.0.0.1:8000/docs
 
 ---
 
