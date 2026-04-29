@@ -406,12 +406,13 @@ Proyecto gestionado con Azure DevOps:
 
 ## 📊 Gestión de Producto
 
-La solución fue diseñada bajo un enfoque de producto, con backlog priorizado y roadmap evolutivo, asegurando alineación entre negocio y tecnología:
+La solución fue diseñada bajo un enfoque de producto, gestionado en Azure DevOps, con backlog priorizado y roadmap evolutivo:
 
 - 📄 [Product Backlog](./azure_devops/product_backlog.md)  
 - 🚀 [Product Roadmap](./azure_devops/product_roadmap.md)  
+- 🔗 [Evidencia de Gestión (Boards)](./azure_devops/boards_evidencia.md)  
 
-Estos documentos reflejan la estrategia de construcción del MVP, evolución de capacidades y alineación con valor de negocio.
+Estos artefactos evidencian la trazabilidad end-to-end del producto, desde definición hasta ejecución.
 
 ---
 
