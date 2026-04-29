@@ -31,7 +31,7 @@ Plataforma desplegada en producción que simula decisiones operacionales en proc
 
 🌐 API desplegada en Render
 
-![Render](diagrams/render_api.png)
+![Render](diagrams/render.png)
 
 📘 Swagger en producción
 
