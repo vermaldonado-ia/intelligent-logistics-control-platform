@@ -168,7 +168,7 @@ Proyecto diseñado desde una perspectiva de **negocio + delivery**, enfocado en:
 6. Generación de ticket
 7. Notificación
 
-📌 Ver diagrama: diagrams/flujo_operacional_general.png
+📌 Ver diagrama: [Flujo Operacional](diagrams/flujo_operacional_general.png)
 
 ---
 
