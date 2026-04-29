@@ -236,7 +236,7 @@ Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud
 
 ### 📈 Métricas de Calidad
 
-![Sonar Overview](diagrams/sonar_overview.png)
+![Sonar Overview](diagrams/sonar_coverage.png)
 
 ---
 
