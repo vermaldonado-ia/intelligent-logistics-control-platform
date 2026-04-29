@@ -389,9 +389,13 @@ Construir una plataforma que automatice decisiones operacionales en procesos log
 Proyecto gestionado con Azure DevOps:
 
 ✔ Backlog estructurado
+
 ✔ Historias y tareas
+
 ✔ Priorización por valor
+
 ✔ Tablero Kanban
+
 ✔ Trazabilidad completa
 
 📎 Evidencia de Gestión (Azure DevOps)
