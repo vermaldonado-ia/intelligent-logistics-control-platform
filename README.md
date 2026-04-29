@@ -107,10 +107,10 @@ http://127.0.0.1:8000/docs
 
 | Caso                 | Resultado          | Evidencia                             |
 | -------------------- | ------------------ | ------------------------------------- |
-| Documentos faltantes | RECHAZADO          | ![Caso1](docs/rejected_documents.png) |
-| Acceso inválido      | RECHAZADO          | ![Caso2](docs/rejected_access.png)    |
-| Riesgo alto          | REVISIÓN REQUERIDA | ![Caso3](docs/high_risk.png)          |
-| Operación válida     | APROBADO           | ![Caso4](docs/approved.png)           |
+| Documentos faltantes | RECHAZADO          | ![Caso1](diagrams/rejected_documents.png) |
+| Acceso inválido      | RECHAZADO          | ![Caso2](diagrams/rejected_access.png)    |
+| Riesgo alto          | REVISIÓN REQUERIDA | ![Caso3](diagrams/high_risk.png)          |
+| Operación válida     | APROBADO           | ![Caso4](diagrams/approved.png)           |
 
 ---
 
