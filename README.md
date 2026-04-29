@@ -337,7 +337,7 @@ Ejecutar Swagger Local:
 
 ---
 
-### 4. Cuidado con “tiempo real”
+### 4. Cuidado con “simulación de decisiones operacionales” 
 
 Usas:
 
