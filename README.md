@@ -16,6 +16,7 @@ Plataforma desplegada en producción que simula decisiones operacionales en proc
 ## 🔗 Accesos en Producción
 
 🔗 API en producción: https://intelligent-logistics-control-platform.onrender.com
+
 🔗 Swagger: https://intelligent-logistics-control-platform.onrender.com/docs
 
 ✔ Deploy automático desde GitHub
