@@ -230,13 +230,13 @@ Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud
 
 ### ✔ Quality Gate
 
-![Quality Gate](docs/sonar_quality_gate.png)
+![Quality Gate](diagrams/sonar_quality_gate.png)
 
 ---
 
 ### 📈 Métricas de Calidad
 
-![Sonar Overview](docs/sonar_overview.png)
+![Sonar Overview](diagrams/sonar_overview.png)
 
 ---
 
