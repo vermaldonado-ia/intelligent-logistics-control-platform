@@ -182,31 +182,20 @@ python -m uvicorn app.api:app --reload
 
 ## 📊 Gestión del Delivery
 
-👉 **Azure DevOps (evidencia real)**
-👉 ./azure_devops/boards_evidencia.md
+El desarrollo del proyecto fue gestionado utilizando Azure DevOps.
 
-👉 **Backlog**
-👉 ./product_backlog.md
+* ✔ Backlog estructurado
+* ✔ Priorización por valor
+* ✔ Tablero Kanban
+* ✔ Trazabilidad end-to-end
 
-👉 **Roadmap**
-👉 ./product_roadmap.md
-
----
-
-## 📈 Valor de negocio
-
-✔ Automatización
-✔ Reducción de riesgo
-✔ Trazabilidad
-✔ Eficiencia
+🔗 Ver evidencia completa:
+👉 [Azure DevOps Boards](./azure_devops/boards_evidencia.md)
 
 ---
 
-## 🚀 Próximos pasos
+## 👩‍💻 Autor
 
-✔ APIs reales
-✔ IA
-✔ IoT
-✔ Arquitectura distribuida
-
----
+**Verónica Maldonado Céspedes**
+Cloud & DevOps Delivery Manager
+Project Manager | Transformación Digital
