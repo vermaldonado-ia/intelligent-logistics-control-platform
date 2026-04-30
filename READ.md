@@ -154,10 +154,10 @@ Este proyecto está diseñado desde una perspectiva de Delivery y negocio, no so
 
 Se enfoca en:
 
-✔ Modelamiento de decisiones operacionales reales
-✔ Orquestación de múltiples reglas de negocio
-✔ Simulación de escenarios críticos de riesgo
-✔ Generación de outputs trazables y explicables
+* ✔ Modelamiento de decisiones operacionales reales
+* ✔ Orquestación de múltiples reglas de negocio
+* ✔ Simulación de escenarios críticos de riesgo
+* ✔ Generación de outputs trazables y explicables
 
 👉 Representa cómo un sistema real tomaría decisiones en entornos logísticos complejos.
 
