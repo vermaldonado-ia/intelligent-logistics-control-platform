@@ -102,6 +102,12 @@ Esta vista permite entender cómo está organizada la solución sin entrar en co
 - 🚀 **Product Roadmap**  
   👉 [Ver roadmap](./azure_devops/product_roadmap.md)
 
+## 📂 Documentación del Producto
+
+- 📄 Product Backlog: ./docs/product_backlog.md  
+- 🚀 Product Roadmap: ./docs/product_roadmap.md  
+- 📊 Gestión en Azure DevOps: ./azure_devops/boards_evidencia.md  
+
 ---
 
 ### ⚙️ Enfoque de gestión
