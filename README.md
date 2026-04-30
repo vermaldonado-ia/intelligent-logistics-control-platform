@@ -1,338 +1,213 @@
-# 🚀 Plataforma Inteligente de Control Logístico
+# 🚛 Intelligent Logistics Control Platform
 
 ![CI](https://github.com/vermaldonado-ia/intelligent-logistics-control-platform/actions/workflows/ci.yml/badge.svg)
 ![Quality Gate](https://img.shields.io/badge/Quality%20Gate-Passed-brightgreen)
-![Cobertura](https://img.shields.io/badge/Cobertura-90%25-green)
+![Coverage](https://img.shields.io/badge/Coverage-85%25-green)
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-green)
-![Deploy](https://img.shields.io/badge/Deploy-Render-blue)
 
 ---
 
-## 🎯 Resumen Ejecutivo
+## 🌐 Accesos en Producción
 
-Plataforma desplegada en producción que simula decisiones operacionales en procesos logísticos críticos, integrando:
+🔗 **API en producción**
+👉 https://intelligent-logistics-control-platform.onrender.com
 
-* Validación documental
-* Control de acceso
-* Evaluación de riesgo operacional
-* Orquestación de decisiones
+🔗 **Swagger (documentación interactiva)**
+👉 https://intelligent-logistics-control-platform.onrender.com/docs
 
-👉 API pública + CI/CD + Quality Gate + Deploy en Cloud
+✔ Deploy automático desde GitHub
+✔ API pública accesible
+✔ Documentación interactiva
+✔ Runtime en cloud
 
----
-
-## 🔗 Accesos en Producción
-
-**🌐 API en producción**  
-https://intelligent-logistics-control-platform.onrender.com  
-
-**📘 Swagger (documentación interactiva)**  
-https://intelligent-logistics-control-platform.onrender.com/docs  
-
----
-
-### 🚀 Características del despliegue
-
-- ✔ Deploy automático desde GitHub  
-- ✔ API pública accesible  
-- ✔ Documentación interactiva  
-- ✔ Runtime en cloud  
-
----
-
-⚠️ **Nota:**  
-Al estar en free tier, la aplicación puede tardar unos segundos en iniciar.
+⚠️ Nota: al estar en free tier, puede tardar unos segundos en iniciar.
 
 ---
 
 ## 📸 Evidencia real en producción
 
-### 🌐 API desplegada en Render
-![API](diagrams/render.png)
+🌐 **API desplegada en Render**
+👉 https://intelligent-logistics-control-platform.onrender.com
+
+📘 **Swagger en producción**
+👉 https://intelligent-logistics-control-platform.onrender.com/docs
+
+⚙️ **Logs de ejecución (Render)**
+👉 https://dashboard.render.com/
 
 ---
 
-### 📘 Swagger en producción
-![Swagger](diagrams/swagger.png)
+## 🧠 Descripción
+
+Plataforma desplegada en producción que simula decisiones operacionales en procesos logísticos críticos, integrando:
+
+* Validación documental
+* Control de acceso
+* Análisis de riesgo operacional
 
 ---
 
-### ⚙️ Logs de ejecución
-![Logs](diagrams/logs.png)
+## 🎯 Objetivo
 
----
-
-## 👩‍💼 Rol en el proyecto
-
-Este proyecto fue desarrollado desde un enfoque de **Delivery Management**, integrando:
-
-* Definición del enfoque de solución
-* Priorización de backlog y roadmap
-* Modelamiento del flujo operacional
-* Aseguramiento de calidad (testing + CI/CD)
-* Enfoque en valor de negocio
-
-👉 No representa solo una implementación técnica, sino la capacidad de liderar soluciones end-to-end.
+* Reducir riesgos operacionales
+* Disminuir errores manuales
+* Mejorar tiempos de validación
+* Aumentar trazabilidad
 
 ---
 
 ## 🧩 Problema de Negocio
 
-En operaciones logísticas reales existen múltiples puntos críticos:
+* Validación manual
+* Ingreso no autorizado
+* Falta de control
+* Evaluación tardía
+* Procesos lentos
 
-* Validación manual de documentos
-* Ingreso de camiones no autorizados
-* Falta de control sobre conductores y vehículos
-* Evaluación tardía de riesgos operacionales
-* Procesos lentos y propensos a error
-
-👉 Impacto directo:
-
-* Seguridad operativa
-* Continuidad del servicio
-* Trazabilidad
-* Eficiencia del proceso
+👉 Impacto: seguridad, continuidad, eficiencia
 
 ---
 
 ## 📊 Antes vs Después
 
-| Antes                 | Después                           |
-| --------------------- | --------------------------------- |
-| Validaciones manuales | Validación automatizada           |
-| Procesos lentos       | Decisiones automatizadas          |
-| Alto riesgo operativo | Evaluación automatizada de riesgo |
-| Baja trazabilidad     | Trazabilidad completa             |
+| Antes            | Después      |
+| ---------------- | ------------ |
+| Manual           | Automatizado |
+| Lento            | Rápido       |
+| Riesgoso         | Controlado   |
+| Sin trazabilidad | Trazable     |
 
 ---
 
 ## 💡 Solución
 
-Se define un flujo de decisiones automatizado que permite:
+API que simula un motor de decisiones:
 
-✔ Validar documentación
-✔ Evaluar condiciones de acceso
-✔ Analizar riesgo operacional
-✔ Orquestar decisiones
-✔ Generar tickets
-✔ Emitir notificaciones
-
----
-
-## 🏗️ Estructura de la Solución
-
-La solución se basa en un flujo de validación compuesto por:
-
-* Validación documental
-* Control de acceso
-* Evaluación de riesgo
-* Orquestación de decisiones
-
-📊 Flujo operacional:
-
-![Flujo Operacional](diagrams/flujo_operacional_general.png)
-
-📌 Componentes principales:
-
-app/
-├── api.py
-├── orchestrator.py
-└── services/
-    ├── document_validator.py
-    ├── access_control.py
-    ├── risk_assessor.py
-    ├── ticket_generator.py
-    └── notification_service.py
+✔ Validación
+✔ Acceso
+✔ Riesgo
+✔ Orquestación
+✔ Ticketing
+✔ Notificación
 
 ---
 
-## 🧠 Enfoque del Proyecto
+## 🏗️ Arquitectura
 
-Proyecto diseñado desde una perspectiva de **negocio + delivery**, enfocado en:
-
-✔ Modelamiento de decisiones operacionales reales
-✔ Orquestación de reglas de negocio
-✔ Simulación de escenarios críticos
-✔ Generación de resultados trazables
+📌 **Ver diagrama**
+👉 ./diagrams/flujo_operacional_general.png
 
 ---
 
-## 🔄 Flujo de la Solución
+## 🔄 Flujo
 
-1. Recepción de datos
-2. Validación documental
-3. Evaluación de acceso
-4. Análisis de riesgo
-5. Toma de decisión
-6. Generación de ticket
+1. Input
+2. Validación
+3. Acceso
+4. Riesgo
+5. Decisión
+6. Ticket
 7. Notificación
 
-📌 Ver diagrama: [Flujo Operacional](diagrams/flujo_operacional_general.png)
+---
+
+## 🚨 Escenarios
+
+❌ REJECTED
+⚠ REVIEW_REQUIRED
+✔ APPROVED
 
 ---
 
-## 🚨 Escenarios de decisión
+## 📸 Evidencia de ejecución (Swagger)
 
-❌ Documentos faltantes → REJECTED
-❌ Documento expirado → REJECTED
-⚠️ Riesgo alto → REVIEW_REQUIRED
-✔️ Operación válida → APPROVED
-
----
-
-## 📸 Evidencia de Ejecución
-
-| Caso | Resultado | Evidencia |
-|------|----------|-----------|
-| Documentos faltantes | REJECTED | ![Documentos faltantes](diagrams/rejected_documents.png) |
-| Acceso inválido | REJECTED | ![Acceso inválido](diagrams/rejected_access.png) |
-| Riesgo alto | REVIEW_REQUIRED | ![Riesgo alto](diagrams/high_risk.png) |
-| Operación válida | APPROVED | ![Operación válida](diagrams/approved.png) |
+| Caso                 | Resultado       | Evidencia                             |
+| -------------------- | --------------- | ------------------------------------- |
+| Documentos faltantes | REJECTED        | ![Caso1](docs/rejected_documents.png) |
+| Acceso inválido      | REJECTED        | ![Caso2](docs/rejected_access.png)    |
+| Riesgo alto          | REVIEW_REQUIRED | ![Caso3](docs/high_risk.png)          |
+| Operación válida     | APPROVED        | ![Caso4](docs/approved.png)           |
 
 ---
 
 ## 🔌 Endpoints
 
+### ✔ API Root (Producción)
+
+👉 https://intelligent-logistics-control-platform.onrender.com
+
+```json
+{
+  "message": "Intelligent Logistics Control Platform API",
+  "status": "running",
+  "docs": "/docs",
+  "health": "/health"
+}
+```
+
+---
+
 ### ✔ Health Check
 
-GET /health
-
-Respuesta:
-{"status": "ok"}
-
-### ✔ Evaluación de Operación
-
-POST /evaluate
+👉 https://intelligent-logistics-control-platform.onrender.com/health
 
 ---
 
-## 🧪 Pruebas y Calidad
+### ✔ Swagger
 
-pytest -v
-pytest --cov=app
-
-✔ Integración CI
-✔ Validación de calidad
-✔ Control de cobertura
+👉 https://intelligent-logistics-control-platform.onrender.com/docs
 
 ---
 
-## ⚙️ Integración CI/CD y Calidad
+## 🧪 Calidad
 
-Pipeline automatizado:
+✔ CI
+✔ Coverage
+✔ SonarCloud
 
-Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud  
-
----
-
-## 📊 Evidencia de Calidad (SonarCloud)
-
-### ✔ Quality Gate
-
-![Quality Gate](diagrams/sonar_quality_gate.png)
+📊 **Ver análisis**
+👉 https://sonarcloud.io/
 
 ---
 
-### 📈 Métricas de Calidad
+## 🚀 Ejecución local
 
-![Sonar Overview](diagrams/sonar_coverage.png)
-
-🔗 Ver en SonarCloud:
-https://sonarcloud.io/project/overview?id=vermaldonado-ia_intelligent-logistics-control-platform
-
----
-
-## ⚙️ Ejecución en Entorno de Desarrollo
-
-git clone https://github.com/vermaldonado-ia/intelligent-logistics-control-platform.git
-cd intelligent-logistics-control-platform
+```bash
 pip install -r requirements.txt
-PYTHONPATH=. python -m uvicorn app.api:app --reload
-
-Swagger:
-http://127.0.0.1:8000/docs
+python -m uvicorn app.api:app --reload
+```
 
 ---
 
-## ⚙️ Tecnologías
+## 📊 Gestión del Delivery
 
-Python
-FastAPI
-Pytest
-Flake8
-Coverage
-GitHub Actions
-SonarCloud
+👉 **Azure DevOps (evidencia real)**
+👉 ./azure_devops/boards_evidencia.md
 
----
+👉 **Backlog**
+👉 ./product_backlog.md
 
-## 📈 Valor para el negocio
-
-✔ Reducción de riesgos
-✔ Mejora en tiempos de validación
-✔ Automatización de procesos
-✔ Mayor trazabilidad
+👉 **Roadmap**
+👉 ./product_roadmap.md
 
 ---
 
-## 🚀 Estrategia de Desarrollo
+## 📈 Valor de negocio
 
-Desarrollo basado en MVPs incrementales.
-
-### 🧩 MVP1
-
-Validación del flujo operacional completo
-
----
-
-## 🎯 Visión del Producto
-
-Automatizar decisiones logísticas con foco en:
-
-* Control
-* Trazabilidad
-* Reducción de riesgos
-
----
-
-## 📊 Gestión del Delivery (Azure DevOps)
-
-✔ Backlog estructurado
-✔ Historias y tareas
-✔ Priorización por valor
-✔ Tablero Kanban
-✔ Trazabilidad completa
-
-🔗 Evidencia: ./azure_devops/boards_evidencia.md
-
----
-
-## 📊 Gestión de Producto
-
-📄 Product Backlog
-🚀 Product Roadmap
-🔗 Evidencia de gestión : ./azure_devops/product_backlog.md
+✔ Automatización
+✔ Reducción de riesgo
+✔ Trazabilidad
+✔ Eficiencia
 
 ---
 
 ## 🚀 Próximos pasos
 
-✔ Integración con APIs reales
-✔ IA para scoring de riesgo
+✔ APIs reales
+✔ IA
+✔ IoT
 ✔ Arquitectura distribuida
-✔ Integración con IoT
-
----
-
-## 🎯 Valor diferencial
-
-✔ Diseño orientado a negocio
-✔ Automatización de decisiones
-✔ Integración DevOps
-✔ Entrega en producción
-
-👉 Representa el rol de un Delivery Manager moderno.
 
 ---
 
