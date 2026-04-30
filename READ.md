@@ -101,12 +101,12 @@ En operaciones logísticas reales existen múltiples puntos críticos:
 
 Se desarrolló una API que simula un motor de decisiones inteligente, capaz de:
 
-✔️ Validar documentación
-✔️ Evaluar condiciones de acceso
-✔️ Analizar riesgo operacional
-✔️ Orquestar decisiones
-✔️ Generar tickets de acceso
-✔️ Emitir notificaciones
+* ✔️ Validar documentación
+* ✔️ Evaluar condiciones de acceso
+* ✔️ Analizar riesgo operacional
+* ✔️ Orquestar decisiones
+* ✔️ Generar tickets de acceso
+* ✔️ Emitir notificaciones
 
 ---
 
