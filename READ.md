@@ -303,11 +303,11 @@ https://sonarcloud.io/summary/new_code?id=vermaldonado-ia_intelligent-logistics-
 
 ### 🧠 Métricas principales
 
-✔ Quality Gate: Passed
-✔ Coverage: ~85%
-✔ Maintainability: A
-✔ Reliability: A
-✔ Security: A
+* ✔ Quality Gate: Passed
+* ✔ Coverage: ~85%
+* ✔ Maintainability: A
+* ✔ Reliability: A
+* ✔ Security: A
 
 💡 Estas métricas se actualizan automáticamente en cada ejecución del pipeline CI/CD.
 
