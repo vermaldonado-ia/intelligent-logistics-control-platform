@@ -101,12 +101,12 @@ En operaciones logísticas reales existen múltiples puntos críticos:
 
 Se desarrolló una API que simula un motor de decisiones inteligente, capaz de:
 
-✔️ Validar documentación
-✔️ Evaluar condiciones de acceso
-✔️ Analizar riesgo operacional
-✔️ Orquestar decisiones
-✔️ Generar tickets de acceso
-✔️ Emitir notificaciones
+- ✔️ Validar documentación crítica  
+- ✔️ Evaluar condiciones de acceso operacional  
+- ✔️ Analizar riesgo logístico  
+- ✔️ Orquestar decisiones automatizadas  
+- ✔️ Generar tickets de acceso  
+- ✔️ Emitir notificaciones operacionales  
 
 ---
 
@@ -114,17 +114,17 @@ Se desarrolló una API que simula un motor de decisiones inteligente, capaz de:
 
 La solución está diseñada bajo un enfoque modular, separando responsabilidades en capas:
 
-API Layer → exposición de endpoints (FastAPI)
-Orchestration Layer → lógica de decisión central
-Services Layer → reglas de negocio desacopladas
+* **API Layer** → exposición de endpoints (FastAPI)
+* **Orchestration Layer** → lógica de decisión central
+* **Services Layer** → reglas de negocio desacopladas
 
-Componentes principales:
+### 📦 Componentes principales
 
-```
+```bash
 app/
-├── api.py
-├── orchestrator.py
-└── services/
+├── api.py                # API FastAPI
+├── orchestrator.py       # Motor de decisiones
+└── services/             # Lógica de negocio
 ```
 
 👉 Este diseño permite:
@@ -136,16 +136,28 @@ app/
 
 ---
 
+### 📊 Flujo operacional de la solución
+
+Este flujo representa cómo se orquesta la toma de decisiones operacionales dentro del sistema.
+
+```markdown
+![Flujo Operacional](diagrams/flujo_operacional_general.png)
+```
+
+![Flujo Operacional](diagrams/flujo_operacional_general.png)
+
+---
+
 ## 🧠 Enfoque del Proyecto
 
 Este proyecto está diseñado desde una perspectiva de Delivery y negocio, no solo técnica.
 
 Se enfoca en:
 
-✔ Modelamiento de decisiones operacionales reales
-✔ Orquestación de múltiples reglas de negocio
-✔ Simulación de escenarios críticos de riesgo
-✔ Generación de outputs trazables y explicables
+* ✔ Modelamiento de decisiones operacionales reales
+* ✔ Orquestación de múltiples reglas de negocio
+* ✔ Simulación de escenarios críticos de riesgo
+* ✔ Generación de outputs trazables y explicables
 
 👉 Representa cómo un sistema real tomaría decisiones en entornos logísticos complejos.
 
@@ -192,7 +204,7 @@ La API fue validada mediante pruebas reales en Swagger, simulando distintos esce
 | Documentos faltantes | REJECTED        | ![Caso1](diagrams/rejected_documents.png) |
 | Acceso inválido      | REJECTED        | ![Caso2](diagrams/rejected_access.png)    |
 | Riesgo alto          | REVIEW_REQUIRED | ![Caso3](diagrams/high_risk.png)          |
-| Operación válida     | APPROVED        | ![Caso4](diagrms/approved.png)           |
+| Operación válida     | APPROVED        | ![Caso4](diagrams/approved.png)           |
 
 👉 Estos escenarios demuestran la capacidad del sistema para simular decisiones operacionales en contextos logísticos reales.
 
@@ -236,6 +248,39 @@ pytest --cov=app
 
 ---
 
+## 📊 Evidencia de Calidad (SonarCloud)
+
+Análisis automático de código estático y calidad del proyecto en cada ejecución del pipeline.
+
+🔗 Proyecto en SonarCloud:
+https://sonarcloud.io/summary/new_code?id=vermaldonado-ia_intelligent-logistics-control-platform
+
+---
+
+### 🔍 Quality Gate
+
+![Quality Gate](diagrams/sonar_quality_gate.png)
+
+---
+
+### 📈 Cobertura de código
+
+![Coverage](diagrams/sonar_coverage.png)
+
+---
+
+### 🧠 Métricas principales
+
+* ✔ Quality Gate: Passed
+* ✔ Coverage: ~85%
+* ✔ Maintainability: A
+* ✔ Reliability: A
+* ✔ Security: A
+
+💡 Estas métricas se actualizan automáticamente en cada ejecución del pipeline CI/CD.
+
+---
+
 ## ⚙️ Tecnologías
 
 * Python
@@ -252,15 +297,17 @@ pytest --cov=app
 
 Este proyecto incorpora un pipeline automatizado de integración continua (CI) utilizando GitHub Actions.
 
-✔️ Ejecución de tests con Pytest
-✔️ Análisis de código con Flake8
-✔️ Formateo con Black
-✔️ Generación de cobertura
-✔️ Análisis de calidad con SonarCloud
+* ✔️ Ejecución de tests con Pytest
+* ✔️ Análisis de código con Flake8
+* ✔️ Formateo con Black
+* ✔️ Generación de cobertura
+* ✔️ Análisis de calidad con SonarCloud
 
 🔄 Flujo del pipeline:
 
+```text
 Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud → Resultado
+```
 
 ---
 
@@ -316,30 +363,30 @@ http://127.0.0.1:8000/docs
 
 ## 📈 Valor para el negocio
 
-✔ Reducir exposición a riesgos operacionales
-✔ Mejorar tiempos de validación
-✔ Automatizar validación documental
-✔ Incrementar trazabilidad
-✔ Sentar base para sistemas logísticos reales
+* ✔ Reducir exposición a riesgos operacionales
+* ✔ Mejorar tiempos de validación
+* ✔ Automatizar validación documental
+* ✔ Incrementar trazabilidad
+* ✔ Sentar base para sistemas logísticos reales
 
 ---
 
 ## 🚀 Próximos pasos
 
-✔ Integración con APIs reales
-✔ Modelos de IA para scoring de riesgo
-✔ Arquitectura distribuida
-✔ Integración con IoT
+* ✔ Integración con APIs reales
+* ✔ Modelos de IA para scoring de riesgo
+* ✔ Arquitectura distribuida
+* ✔ Integración con IoT
 
 ---
 
 ## 🎯 Valor diferencial del proyecto
 
-✔ Diseño orientado a negocio
-✔ Modelamiento de procesos reales
-✔ Automatización de decisiones
-✔ Integración DevOps (CI/CD + despliegue)
-✔ Entrega en producción
+* ✔ Diseño orientado a negocio
+* ✔ Modelamiento de procesos reales
+* ✔ Automatización de decisiones
+* ✔ Integración DevOps (CI/CD + despliegue)
+* ✔ Entrega en producción
 
 👉 Representa el rol de un Delivery Manager en entornos tecnológicos modernos.
 
@@ -367,10 +414,10 @@ Construir una plataforma inteligente que permita automatizar decisiones operacio
 
 El desarrollo del proyecto fue gestionado utilizando Azure DevOps.
 
-✔ Backlog estructurado
-✔ Priorización por valor
-✔ Tablero Kanban
-✔ Trazabilidad end-to-end
+* ✔ Backlog estructurado
+* ✔ Priorización por valor
+* ✔ Tablero Kanban
+* ✔ Trazabilidad end-to-end
 
 🔗 Ver evidencia completa:
 👉 [Azure DevOps Boards](./azure_devops/boards_evidencia.md)
@@ -379,8 +426,6 @@ El desarrollo del proyecto fue gestionado utilizando Azure DevOps.
 
 ## 👩‍💻 Autor
 
-Verónica Maldonado Céspedes
+**Verónica Maldonado Céspedes**
 Cloud & DevOps Delivery Manager
 Project Manager | Transformación Digital
-
----
