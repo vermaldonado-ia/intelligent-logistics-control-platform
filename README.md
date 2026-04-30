@@ -42,7 +42,7 @@ Plataforma que simula decisiones operacionales en procesos logísticos críticos
 
 ## 🏗️ Arquitectura de la Solución
 
-![Arquitectura](diagrams/arquitectura.png)
+![Arquitectura](diagrams/flujo_operacional_general.png)
 
 📄 Ver detalle completo:
 👉 ./docs/arquitectura_detallada.md
