@@ -37,7 +37,7 @@ La operación es rechazada debido a la ausencia de documentación obligatoria.
 
 📌 Evidencia:
 
-![Caso 1](../diagrams/reject_documents.png)
+![Caso 1](../diagrams/rejected_documents.png)
 
 ---
 
@@ -47,7 +47,7 @@ Se detecta que el camión o conductor no está autorizado para el retiro de merc
 
 📌 Evidencia:
 
-![Caso 2](../diagrams/reject_access.png)
+![Caso 2](../diagrams/rejected_access.png)
 
 ---
 
