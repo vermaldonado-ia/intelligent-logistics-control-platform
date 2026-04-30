@@ -40,12 +40,18 @@ Plataforma que simula decisiones operacionales en procesos logísticos críticos
 
 ---
 
-## 🏗️ Arquitectura de la Solución
+## 🏗️ Arquitectura de la solución
 
-![Arquitectura](diagrams/flujo_operacional_general.png)
+La solución fue diseñada de forma simple para representar cómo una API puede automatizar decisiones operacionales en un proceso logístico.
 
-📄 Ver detalle completo:
-👉 ./docs/arquitectura_detallada.md
+Se compone de:
+
+- API que recibe la solicitud
+- Motor de decisión que centraliza la lógica
+- Validaciones de negocio (documentos, acceso, riesgo)
+- Resultado operacional
+
+Esta vista permite entender cómo está organizada la solución sin entrar en complejidad técnica.
 
 ---
 
