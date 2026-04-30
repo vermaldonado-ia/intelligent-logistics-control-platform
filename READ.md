@@ -8,13 +8,13 @@
 
 ---
 
-## 🌐 API en Producción
+## 🌐 Accesos en Producción
 
-🔗 API en producción:
-https://intelligent-logistics-control-platform.onrender.com
+🔗 **API en producción**
+👉 https://intelligent-logistics-control-platform.onrender.com
 
-📘 Swagger (documentación interactiva):
-https://intelligent-logistics-control-platform.onrender.com/docs
+🔗 **Swagger (documentación interactiva)**
+👉 https://intelligent-logistics-control-platform.onrender.com/docs
 
 ✔ Deploy automático desde GitHub
 ✔ API pública accesible
@@ -27,9 +27,14 @@ https://intelligent-logistics-control-platform.onrender.com/docs
 
 ## 📸 Evidencia real en producción
 
-🌐 API desplegada en Render
-📘 Swagger en producción
-⚙️ Logs de ejecución
+🌐 **API desplegada en Render**
+👉 https://intelligent-logistics-control-platform.onrender.com
+
+📘 **Swagger en producción**
+👉 https://intelligent-logistics-control-platform.onrender.com/docs
+
+⚙️ **Logs de ejecución (Render)**
+👉 https://dashboard.render.com/
 
 ---
 
@@ -41,118 +46,77 @@ Plataforma desplegada en producción que simula decisiones operacionales en proc
 * Control de acceso
 * Análisis de riesgo operacional
 
-Permite simular un flujo real de decisión automatizada en entornos logísticos complejos.
-
 ---
 
 ## 🎯 Objetivo
 
-Diseñar una solución tecnológica orientada a negocio que permita:
-
 * Reducir riesgos operacionales
 * Disminuir errores manuales
 * Mejorar tiempos de validación
-* Aumentar trazabilidad y control
+* Aumentar trazabilidad
 
 ---
 
 ## 🧩 Problema de Negocio
 
-En operaciones logísticas reales existen múltiples puntos críticos:
+* Validación manual
+* Ingreso no autorizado
+* Falta de control
+* Evaluación tardía
+* Procesos lentos
 
-* Validación manual de documentos
-* Ingreso de camiones no autorizados
-* Falta de control sobre conductores y vehículos
-* Evaluación tardía de riesgos operacionales
-* Procesos lentos y propensos a error
-
-👉 Impacto directo:
-
-* Seguridad operativa
-* Continuidad del servicio
-* Trazabilidad
-* Eficiencia del proceso
+👉 Impacto: seguridad, continuidad, eficiencia
 
 ---
 
 ## 📊 Antes vs Después
 
-| Antes                 | Después                           |
-| --------------------- | --------------------------------- |
-| Validaciones manuales | Validación automatizada           |
-| Procesos lentos       | Decisiones automatizadas          |
-| Alto riesgo operativo | Evaluación automatizada de riesgo |
-| Baja trazabilidad     | Trazabilidad completa             |
+| Antes            | Después      |
+| ---------------- | ------------ |
+| Manual           | Automatizado |
+| Lento            | Rápido       |
+| Riesgoso         | Controlado   |
+| Sin trazabilidad | Trazable     |
 
 ---
 
 ## 💡 Solución
 
-Se desarrolló una API que simula un motor de decisiones inteligente, capaz de:
+API que simula un motor de decisiones:
 
-✔ Validar documentación
-✔ Evaluar condiciones de acceso
-✔ Analizar riesgo operacional
-✔ Orquestar decisiones
-✔ Generar tickets de acceso
-✔ Emitir notificaciones
-
----
-
-## 🏗️ Arquitectura de la solución
-
-```
-app/
-├── api.py
-├── orchestrator.py
-└── services/
-```
-
-* API Layer → exposición de endpoints (FastAPI)
-* Orchestration Layer → lógica de decisión central
-* Services Layer → reglas de negocio desacopladas
-
-👉 Permite:
-
-* Escalabilidad
-* Mantenibilidad
-* Separación de responsabilidades
-* Evolución hacia microservicios
+✔ Validación
+✔ Acceso
+✔ Riesgo
+✔ Orquestación
+✔ Ticketing
+✔ Notificación
 
 ---
 
-## 🧠 Enfoque del Proyecto
+## 🏗️ Arquitectura
 
-Proyecto diseñado desde una perspectiva de Delivery y negocio:
-
-✔ Modelamiento de decisiones reales
-✔ Orquestación de reglas
-✔ Simulación de escenarios críticos
-✔ Outputs trazables y explicables
+📌 **Ver diagrama**
+👉 ./diagrams/flujo_operacional_general.png
 
 ---
 
-## 🔄 Flujo de la Solución
+## 🔄 Flujo
 
-1. Recepción de datos
-2. Validación documental
-3. Evaluación de acceso
-4. Análisis de riesgo
-5. Toma de decisión
-6. Generación de ticket
+1. Input
+2. Validación
+3. Acceso
+4. Riesgo
+5. Decisión
+6. Ticket
 7. Notificación
 
-📌 Ver diagrama:
-👉 diagrams/flujo_operacional_general.png
-
 ---
 
-## 🚨 Escenarios de decisión
+## 🚨 Escenarios
 
-❌ Documentos faltantes → REJECTED
-❌ Documento expirado → REJECTED
-⚠ Riesgo alto → REVIEW_REQUIRED
-✔ Operación válida → APPROVED
+❌ REJECTED
+⚠ REVIEW_REQUIRED
+✔ APPROVED
 
 ---
 
@@ -169,9 +133,9 @@ Proyecto diseñado desde una perspectiva de Delivery y negocio:
 
 ## 🔌 Endpoints
 
-### ✔ Root (API en producción)
+### ✔ API Root (Producción)
 
-GET /
+👉 https://intelligent-logistics-control-platform.onrender.com
 
 ```json
 {
@@ -182,180 +146,75 @@ GET /
 }
 ```
 
-👉 Permite validar que la API está operativa en producción.
-
 ---
 
 ### ✔ Health Check
 
-GET /health
-
-```json
-{"status": "ok"}
-```
+👉 https://intelligent-logistics-control-platform.onrender.com/health
 
 ---
 
-### ✔ Evaluación de Operación
+### ✔ Swagger
 
-POST /evaluate
-
-```json
-{
-  "payload": {
-    "driver": {
-      "authorized": true,
-      "fatigue_level": "medium"
-    },
-    "vehicle": {
-      "authorized": true
-    },
-    "cargo": {
-      "type": "container",
-      "declared_value": 120000
-    }
-  }
-}
-```
+👉 https://intelligent-logistics-control-platform.onrender.com/docs
 
 ---
 
-## 🧪 Pruebas y Calidad
+## 🧪 Calidad
 
-```bash
-pytest -v
-pytest --cov=app
-```
+✔ CI
+✔ Coverage
+✔ SonarCloud
 
-✔ CI con GitHub Actions
-✔ Validación con SonarCloud
-✔ Control de cobertura
-
----
-
-## ⚙️ Tecnologías
-
-* Python
-* FastAPI
-* Pytest
-* Flake8
-* Coverage
-* GitHub Actions
-* SonarCloud
-
----
-
-## ⚙️ CI/CD y Calidad
-
-Flujo:
-
-Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud
-
-✔ Quality Gate: Passed
-✔ Coverage: ~85%
-✔ Maintainability: A
-✔ Reliability: A
-✔ Security: A
+📊 **Ver análisis**
+👉 https://sonarcloud.io/
 
 ---
 
 ## 🚀 Ejecución local
 
 ```bash
-python -m venv venv
-source venv/bin/activate
 pip install -r requirements.txt
 python -m uvicorn app.api:app --reload
 ```
-
-Swagger:
-http://127.0.0.1:8000/docs
-
----
-
-## 📈 Valor para el negocio
-
-✔ Reducción de riesgos
-✔ Automatización
-✔ Trazabilidad
-✔ Eficiencia operacional
-✔ Base para evolución tecnológica
-
----
-
-## 🚀 Próximos pasos
-
-✔ Integración con APIs reales
-✔ IA para scoring de riesgo
-✔ Arquitectura distribuida
-✔ IoT (GPS, sensores)
-
----
-
-## 🎯 Valor diferencial del proyecto
-
-✔ Diseño orientado a negocio
-✔ Modelamiento real
-✔ Automatización de decisiones
-✔ CI/CD + Deploy
-✔ API en producción
-
-👉 Representa el rol de un Delivery Manager moderno
-
----
-
-## 🚀 Estrategia de Desarrollo
-
-MVPs incrementales
-
-### MVP1 — Validación del Flujo Operacional
-
-Validación completa del flujo en entorno simulado
-
----
-
-## 🎯 Visión del Producto
-
-Automatizar decisiones logísticas con foco en:
-
-* Trazabilidad
-* Control
-* Reducción de riesgos
 
 ---
 
 ## 📊 Gestión del Delivery
 
-Gestionado con Azure DevOps:
-
-✔ Backlog
-✔ Historias
-✔ Tareas
-✔ Priorización
-✔ Kanban
-✔ Trazabilidad
-
----
-
-## 📎 Evidencia Azure DevOps
-
+👉 **Azure DevOps (evidencia real)**
 👉 ./azure_devops/boards_evidencia.md
 
+👉 **Backlog**
+👉 ./product_backlog.md
+
+👉 **Roadmap**
+👉 ./product_roadmap.md
+
 ---
 
-## 📊 Gestión de Producto
+## 📈 Valor de negocio
 
-* 📄 Product Backlog
-* 🚀 Product Roadmap
-* 🔗 Evidencia Boards
+✔ Automatización
+✔ Reducción de riesgo
+✔ Trazabilidad
+✔ Eficiencia
+
+---
+
+## 🚀 Próximos pasos
+
+✔ APIs reales
+✔ IA
+✔ IoT
+✔ Arquitectura distribuida
 
 ---
 
 ## 👩‍💻 Autor
 
-**Verónica Maldonado Céspedes**
+**Verónica Maldonado**
 Cloud & DevOps Delivery Manager
-Project Manager | Transformación Digital
 
 ---
 
