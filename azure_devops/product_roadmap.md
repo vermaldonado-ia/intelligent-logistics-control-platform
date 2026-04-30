@@ -36,15 +36,15 @@ https://intelligent-logistics-control-platform.onrender.com/docs
 
 ### 🌐 API desplegada
 
-![API](docs/api_production.png)
+![API](diagrams/api_production.png)
 
 ### 📘 Swagger en producción
 
-![Swagger](docs/swagger_production.png)
+![Swagger](diagram/swagger_production.png)
 
 ### ⚙️ Logs de ejecución
 
-![Logs](docs/logs.png)
+![Logs](diagrams/logs.png)
 
 ---
 
@@ -139,10 +139,10 @@ app/
 
 | Caso                 | Resultado       | Evidencia                             |
 | -------------------- | --------------- | ------------------------------------- |
-| Documentos faltantes | REJECTED        | ![Caso1](docs/rejected_documents.png) |
-| Acceso inválido      | REJECTED        | ![Caso2](docs/rejected_access.png)    |
-| Riesgo alto          | REVIEW_REQUIRED | ![Caso3](docs/high_risk.png)          |
-| Operación válida     | APPROVED        | ![Caso4](docs/approved.png)           |
+| Documentos faltantes | REJECTED        | ![Caso1](diagrams/rejected_documents.png) |
+| Acceso inválido      | REJECTED        | ![Caso2](diagrams/rejected_access.png)    |
+| Riesgo alto          | REVIEW_REQUIRED | ![Caso3](diagrams/high_risk.png)          |
+| Operación válida     | APPROVED        | ![Caso4](diagrams/approved.png)           |
 
 ---
 
@@ -168,9 +168,9 @@ Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud
 
 ## 📊 Evidencia de Calidad (SonarCloud)
 
-![Quality Gate](docs/sonar_quality_gate.png)
+![Quality Gate](diagrams/sonar_quality_gate.png)
 
-![Coverage](docs/sonar_overview.png)
+![Coverage](diagrams/sonar_overview.png)
 
 🔗 https://sonarcloud.io/project/overview?id=vermaldonado-ia_intelligent-logistics-control-platform
 
