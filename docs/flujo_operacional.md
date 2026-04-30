@@ -146,6 +146,7 @@ El flujo operacional fue definido a partir de las capacidades priorizadas en el 
 Ver detalle:
 
 - 📊 [Product Backlog](./docs/product_backlog.md)
+- 🚀 [Product Roadmap](./docs/product_roadmap.md)
 
 ---
 
