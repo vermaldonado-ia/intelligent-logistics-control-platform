@@ -145,7 +145,7 @@ El flujo operacional fue definido a partir de las capacidades priorizadas en el 
 
 Ver detalle:
 
-* ./product_backlog.md
+- 📊 [Product Backlog](./docs/product_backlog.md)
 
 ---
 
