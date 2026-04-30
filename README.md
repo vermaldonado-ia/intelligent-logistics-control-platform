@@ -76,10 +76,11 @@ La solución implementa un motor de decisiones que valida operaciones logística
 
 ---
 
-## 🚨 Escenarios de Decisión
+## 📸 Evidencia de Ejecución
 
-📄 Ver evidencia completa:
-👉 ./docs/evidencia_ejecucion.md
+Resultados reales del flujo operacional:
+
+👉 [Ver evidencia completa](./docs/evidencia_ejecucion.md)
 
 ---
 
