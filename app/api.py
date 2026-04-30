@@ -33,11 +33,12 @@ def evaluate_operation(request: OperationRequest) -> Dict[str, Any]:
     
 
 @app.get("/")
-def root() -> Dict[str, str]:
+def root() -> Dict[str, Any]:
     return {
-        "message": "Intelligent Logistics Control Platform API",
+        "service": "Intelligent Logistics Control Platform",
+        "type": "Decision Automation API (Simulation)",
         "status": "running",
-        "docs": "/docs",
-        "health": "/health",
+        "environment": "production",
+        "documentation": "/docs",
+        "health_check": "/health"
     }
-    
