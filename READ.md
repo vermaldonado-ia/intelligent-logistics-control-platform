@@ -264,15 +264,17 @@ pytest --cov=app
 
 Este proyecto incorpora un pipeline automatizado de integración continua (CI) utilizando GitHub Actions.
 
-✔️ Ejecución de tests con Pytest
-✔️ Análisis de código con Flake8
-✔️ Formateo con Black
-✔️ Generación de cobertura
-✔️ Análisis de calidad con SonarCloud
+* ✔️ Ejecución de tests con Pytest
+* ✔️ Análisis de código con Flake8
+* ✔️ Formateo con Black
+* ✔️ Generación de cobertura
+* ✔️ Análisis de calidad con SonarCloud
 
 🔄 Flujo del pipeline:
 
+```text
 Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud → Resultado
+```
 
 ---
 
