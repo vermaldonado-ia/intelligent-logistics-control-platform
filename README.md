@@ -94,15 +94,21 @@ Esta vista permite entender cómo está organizada la solución sin entrar en co
 
 ## 📊 Gestión del Producto
 
-📄 Product Backlog
-👉 ./docs/product_backlog.md
+### 📄 Artefactos de producto
 
-📄 Product Roadmap
-👉 ./docs/product_roadmap.md
+- 📄 **Product Backlog**  
+  👉 [Ver backlog](./docs/product_backlog.md)
 
-✔ Gestión en Azure DevOps
-✔ Priorización por valor
-✔ Trazabilidad end-to-end
+- 🚀 **Product Roadmap**  
+  👉 [Ver roadmap](./docs/product_roadmap.md)
+
+---
+
+### ⚙️ Enfoque de gestión
+
+- Gestión en Azure DevOps  
+- Priorización por valor  
+- Trazabilidad end-to-end  
 
 ---
 
