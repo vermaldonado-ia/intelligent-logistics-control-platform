@@ -131,6 +131,7 @@ http://127.0.0.1:8000/docs
 
 ## 👩‍💻 Autor
 
-Verónica Maldonado Céspedes
-Cloud & DevOps Delivery Manager
+**Verónica Maldonado Céspedes**  
+Cloud & DevOps Delivery Manager  
+Project Manager | Transformación Digital
 
