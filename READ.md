@@ -277,13 +277,13 @@ https://sonarcloud.io/summary/new_code?id=vermaldonado-ia_intelligent-logistics-
 
 ### 🔍 Quality Gate
 
-![Quality Gate](docs/sonar_quality_gate.png)
+![Quality Gate](diagrams/sonar_quality_gate.png)
 
 ---
 
 ### 📈 Cobertura de código
 
-![Coverage](docs/sonar_coverage.png)
+![Coverage](diagrams/sonar_coverage.png)
 
 ---
 
