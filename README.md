@@ -64,10 +64,15 @@ Esta vista permite entender cómo está organizada la solución sin entrar en co
 
 ## 🔄 Flujo Operacional
 
-![Flujo](diagrams/flujo_operacional_general.png)
+La solución implementa un motor de decisiones que valida operaciones logísticas antes de su ejecución, asegurando control, seguridad y trazabilidad.
 
-📄 Ver flujo completo:
-👉 ./docs/flujo_operacional.md
+📌 Diagrama del flujo:
+
+![Flujo Operacional](./diagrams/flujo_operacional_general.png)
+
+🔍 Para ver el detalle completo del flujo y reglas de negocio:
+
+👉 [Flujo Operacional](./docs/flujo_operacional.md)
 
 ---
 
