@@ -9,14 +9,21 @@
 
 ## 🌐 API en Producción
 
-🔗 https://intelligent-logistics-control-platform.onrender.com
-🔗 https://intelligent-logistics-control-platform.onrender.com/docs
+### 🔗 URLs principales
 
-✔ Deploy automático desde GitHub
-✔ API pública accesible
-✔ Documentación interactiva
+- **API pública:**  
+  https://intelligent-logistics-control-platform.onrender.com
 
-⚠️ Free tier: puede tardar en iniciar
+- **Swagger / Documentación interactiva:**  
+  https://intelligent-logistics-control-platform.onrender.com/docs
+
+### ✅ Estado del despliegue
+
+- Deploy automático desde GitHub
+- API pública accesible
+- Documentación interactiva disponible
+
+> ⚠️ Nota: al estar desplegada en free tier, la API puede tardar algunos segundos en iniciar.
 
 ---
 
