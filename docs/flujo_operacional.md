@@ -194,3 +194,12 @@ Cada etapa del flujo operacional se encuentra implementada mediante componentes 
 
 👉 Ver arquitectura completa:
 - [Arquitectura de la solución](./arquitectura.md)
+
+---
+
+## 📸 Evidencia de ejecución
+
+Este flujo ha sido validado mediante casos de prueba representativos.
+
+👉 Ver resultados:
+- [Evidencia de ejecución](./evidencia_ejecucion.md)
