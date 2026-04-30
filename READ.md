@@ -264,13 +264,38 @@ Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud → Resul
 
 ---
 
+---
+
 ## 📊 Evidencia de Calidad (SonarCloud)
+
+Análisis automático de código estático y calidad del proyecto en cada ejecución del pipeline.
+
+🔗 Proyecto en SonarCloud:
+https://sonarcloud.io/summary/new_code?id=vermaldonado-ia_intelligent-logistics-control-platform
+
+---
+
+### 🔍 Quality Gate
+
+![Quality Gate](docs/sonar_quality_gate.png)
+
+---
+
+### 📈 Cobertura de código
+
+![Coverage](docs/sonar_coverage.png)
+
+---
+
+### 🧠 Métricas principales
 
 ✔ Quality Gate: Passed
 ✔ Coverage: ~85%
 ✔ Maintainability: A
 ✔ Reliability: A
 ✔ Security: A
+
+💡 Estas métricas se actualizan automáticamente en cada ejecución del pipeline CI/CD.
 
 ---
 
