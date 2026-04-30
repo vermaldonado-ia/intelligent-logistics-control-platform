@@ -36,7 +36,7 @@ https://intelligent-logistics-control-platform.onrender.com/docs
 
 🌐 API desplegada en Render
 
-![Render](diagrams/render_api.png)
+![Render](diagrams/render.png)
 
 📘 Swagger en producción
 
