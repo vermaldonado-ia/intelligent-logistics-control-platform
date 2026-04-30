@@ -97,10 +97,10 @@ Esta vista permite entender cómo está organizada la solución sin entrar en co
 ### 📄 Artefactos de producto
 
 - 📄 **Product Backlog**  
-  👉 [Ver backlog](./docs/product_backlog.md)
+  👉 [Ver backlog](./azure_devops/product_backlog.md)
 
 - 🚀 **Product Roadmap**  
-  👉 [Ver roadmap](./docs/product_roadmap.md)
+  👉 [Ver roadmap](./azure_devops/product_roadmap.md)
 
 ---
 
