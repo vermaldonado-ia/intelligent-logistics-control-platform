@@ -36,11 +36,11 @@ https://intelligent-logistics-control-platform.onrender.com/docs
 
 ### 🌐 API desplegada
 
-![API](diagrams/api_production.png)
+![API](diagrams/render.png)
 
 ### 📘 Swagger en producción
 
-![Swagger](diagram/swagger_production.png)
+![Swagger](diagram/swagger.png)
 
 ### ⚙️ Logs de ejecución
 
