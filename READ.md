@@ -355,30 +355,30 @@ http://127.0.0.1:8000/docs
 
 ## 📈 Valor para el negocio
 
-✔ Reducir exposición a riesgos operacionales
-✔ Mejorar tiempos de validación
-✔ Automatizar validación documental
-✔ Incrementar trazabilidad
-✔ Sentar base para sistemas logísticos reales
+* ✔ Reducir exposición a riesgos operacionales
+* ✔ Mejorar tiempos de validación
+* ✔ Automatizar validación documental
+* ✔ Incrementar trazabilidad
+* ✔ Sentar base para sistemas logísticos reales
 
 ---
 
 ## 🚀 Próximos pasos
 
-✔ Integración con APIs reales
-✔ Modelos de IA para scoring de riesgo
-✔ Arquitectura distribuida
-✔ Integración con IoT
+* ✔ Integración con APIs reales
+* ✔ Modelos de IA para scoring de riesgo
+* ✔ Arquitectura distribuida
+* ✔ Integración con IoT
 
 ---
 
 ## 🎯 Valor diferencial del proyecto
 
-✔ Diseño orientado a negocio
-✔ Modelamiento de procesos reales
-✔ Automatización de decisiones
-✔ Integración DevOps (CI/CD + despliegue)
-✔ Entrega en producción
+* ✔ Diseño orientado a negocio
+* ✔ Modelamiento de procesos reales
+* ✔ Automatización de decisiones
+* ✔ Integración DevOps (CI/CD + despliegue)
+* ✔ Entrega en producción
 
 👉 Representa el rol de un Delivery Manager en entornos tecnológicos modernos.
 
