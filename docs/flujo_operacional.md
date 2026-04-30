@@ -53,17 +53,23 @@ Se valida que la operación cuente con la documentación requerida:
 
 ---
 
-### 2. 🚛 Control de Acceso Operacional
+### 2. 🚛 Control de Acceso Operacional (Ingreso a Puerto)
 
-Se valida la autorización de ingreso al sistema:
+Se valida la autorización de ingreso al puerto para realizar el retiro de mercancía con destino a bodega.
 
-* Camión autorizado
-* Conductor habilitado
-* Cumplimiento de ventana horaria
+Este control representa un punto crítico del proceso logístico, donde se asegura que únicamente operaciones válidas y previamente autorizadas puedan acceder al recinto portuario.
+
+Se validan las siguientes condiciones:
+
+- Camión autorizado para retiro de carga
+- Conductor habilitado y validado
+- Asociación correcta entre camión, conductor y operación
+- Cumplimiento de ventana horaria asignada
+- Autorización de ingreso al puerto
 
 **Regla:**
 
-* Acceso inválido → `REJECTED`
+- Acceso inválido o no autorizado → `REJECTED`
 
 ---
 
