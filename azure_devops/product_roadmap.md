@@ -1,138 +1,256 @@
-# 🚀 Product Roadmap — Intelligent Logistics Control Platform
+# 🚀 Plataforma Inteligente de Control Logístico
+
+![CI](https://github.com/vermaldonado-ia/intelligent-logistics-control-platform/actions/workflows/ci.yml/badge.svg)
+![Quality Gate](https://img.shields.io/badge/Quality%20Gate-Passed-brightgreen)
+![Cobertura](https://img.shields.io/badge/Cobertura-90%25-green)
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-API-green)
+![Deploy](https://img.shields.io/badge/Deploy-Render-blue)
 
 ---
 
-## 🎯 Enfoque
+## 🎯 Resumen Ejecutivo
 
-El roadmap define la evolución de la solución desde un MVP validado hacia una plataforma inteligente de control logístico, escalable y orientada a datos.
+Plataforma desplegada en producción que simula decisiones operacionales en procesos logísticos críticos, integrando:
 
-Cada fase agrega valor incremental, permitiendo validar hipótesis de negocio antes de aumentar la complejidad tecnológica.
+* Validación documental
+* Control de acceso
+* Evaluación de riesgo operacional
+* Orquestación de decisiones
 
----
-
-## 📅 Evolución del Producto
-
-### 🧩 MVP1 — Validación Operacional (Actual)
-
-**Objetivo:**  
-Validar el flujo completo de decisiones operacionales en un entorno controlado.
-
-**Capacidades:**
-
-- Validación documental  
-- Control de acceso  
-- Evaluación de riesgo  
-- Orquestación de decisiones  
-- API operativa  
-
-**Resultado:**
-
-- Flujo operativo automatizado  
-- Reducción de validaciones manuales  
-- Base funcional del sistema  
+👉 API pública + CI/CD + Quality Gate + Deploy en Cloud
 
 ---
 
-### 🔗 MVP2 — Integración
+## 🔗 Accesos en Producción
 
-**Objetivo:**  
-Conectar la solución con sistemas reales y habilitar trazabilidad histórica.
+**🌐 API en producción**
+https://intelligent-logistics-control-platform.onrender.com
 
-**Capacidades:**
-
-- Integración con sistemas externos  
-- Persistencia de datos  
-- Historial de operaciones  
-
-**Valor:**
-
-- Mayor control operativo  
-- Continuidad de información  
-- Base para analítica  
+**📘 Swagger (documentación interactiva)**
+https://intelligent-logistics-control-platform.onrender.com/docs
 
 ---
 
-### 🧠 MVP3 — Inteligencia
+## 📸 Evidencia real en producción
 
-**Objetivo:**  
-Incorporar análisis avanzado para mejorar la toma de decisiones.
+### 🌐 API desplegada
 
-**Capacidades:**
+![API](docs/api_production.png)
 
-- Scoring de riesgo  
-- Alertas inteligentes  
-- Priorización automática  
+### 📘 Swagger en producción
 
-**Valor:**
+![Swagger](docs/swagger_production.png)
 
-- Decisiones más precisas  
-- Reducción de riesgos  
-- Automatización avanzada  
+### ⚙️ Logs de ejecución
+
+![Logs](docs/logs.png)
 
 ---
 
-### ☁️ MVP4 — Escalabilidad
+## 👩‍💼 Rol en el proyecto
 
-**Objetivo:**  
-Evolucionar hacia una arquitectura robusta y altamente disponible.
+Este proyecto fue desarrollado desde un enfoque de **Delivery Management**, integrando:
 
-**Capacidades:**
-
-- Arquitectura distribuida  
-- Observabilidad  
-- Alta disponibilidad  
-
-**Valor:**
-
-- Soporte a mayor volumen de operaciones  
-- Resiliencia del sistema  
-- Operación continua  
+* Definición del enfoque de solución
+* Priorización de backlog y roadmap
+* Modelamiento del flujo operacional
+* Aseguramiento de calidad (testing + CI/CD)
+* Enfoque en valor de negocio
 
 ---
 
-### 📡 MVP5 — IoT & Tiempo Real
+## 🧩 Problema de Negocio
 
-**Objetivo:**  
-Integrar monitoreo en tiempo real mediante dispositivos físicos.
-
-**Capacidades:**
-
-- Integración GPS real  
-- Monitoreo en tiempo real  
-- Trazabilidad completa  
-
-**Valor:**
-
-- Visibilidad end-to-end  
-- Control en tiempo real  
-- Prevención proactiva de riesgos  
+* Validación manual de documentos
+* Ingreso de camiones no autorizados
+* Falta de control sobre conductores y vehículos
+* Evaluación tardía de riesgos
+* Procesos lentos y propensos a error
 
 ---
 
-## 📊 Enfoque de Evolución
+## 📊 Antes vs Después
 
-- Crecimiento incremental basado en valor  
-- Validación continua de hipótesis  
-- Reducción progresiva de riesgos  
-- Escalabilidad controlada  
-
----
-
-## 🔗 Relación con el Proyecto
-
-Este roadmap se encuentra alineado con:
-
-- 📄 README principal del repositorio  
-- 📊 Product Backlog  
-- 🧱 Arquitectura Cloud propuesta  
-- ⚙️ Implementación técnica del MVP  
+| Antes                 | Después                  |
+| --------------------- | ------------------------ |
+| Validaciones manuales | Validación automatizada  |
+| Procesos lentos       | Decisiones automatizadas |
+| Alto riesgo operativo | Evaluación automatizada  |
+| Baja trazabilidad     | Trazabilidad completa    |
 
 ---
 
-## 🚀 Próximos Pasos
+## 💡 Solución
 
-- Integración con APIs reales  
-- Incorporación de modelos de IA  
-- Evolución hacia microservicios  
-- Integración con dispositivos IoT  
+* ✔ Validación documental
+* ✔ Control de acceso
+* ✔ Evaluación de riesgo
+* ✔ Orquestación de decisiones
+* ✔ Generación de tickets
+* ✔ Notificaciones
 
+---
+
+## 🏗️ Estructura de la Solución
+
+📊 Flujo operacional:
+
+![Flujo Operacional](diagrams/flujo_operacional_general.png)
+
+📌 Componentes:
+
+```
+app/
+ ├── api.py
+ ├── orchestrator.py
+ └── services/
+      ├── document_validator.py
+      ├── access_control.py
+      ├── risk_assessor.py
+      ├── ticket_generator.py
+      └── notification_service.py
+```
+
+---
+
+## 🔄 Flujo de la Solución
+
+1. Recepción de datos
+2. Validación documental
+3. Evaluación de acceso
+4. Análisis de riesgo
+5. Decisión
+6. Ticket
+7. Notificación
+
+---
+
+## 🚨 Escenarios de decisión
+
+* ❌ Documentos faltantes → REJECTED
+* ❌ Acceso inválido → REJECTED
+* ⚠️ Riesgo alto → REVIEW_REQUIRED
+* ✔️ Operación válida → APPROVED
+
+---
+
+## 📸 Evidencia de Ejecución
+
+| Caso                 | Resultado       | Evidencia                             |
+| -------------------- | --------------- | ------------------------------------- |
+| Documentos faltantes | REJECTED        | ![Caso1](docs/rejected_documents.png) |
+| Acceso inválido      | REJECTED        | ![Caso2](docs/rejected_access.png)    |
+| Riesgo alto          | REVIEW_REQUIRED | ![Caso3](docs/high_risk.png)          |
+| Operación válida     | APPROVED        | ![Caso4](docs/approved.png)           |
+
+---
+
+## 🔌 Endpoints
+
+### Health Check
+
+GET /health
+
+### Evaluación
+
+POST /evaluate
+
+---
+
+## ⚙️ Integración CI/CD y Calidad
+
+Pipeline:
+
+Push → GitHub Actions → Tests → Lint → Coverage → SonarCloud
+
+---
+
+## 📊 Evidencia de Calidad (SonarCloud)
+
+![Quality Gate](docs/sonar_quality_gate.png)
+
+![Coverage](docs/sonar_overview.png)
+
+🔗 https://sonarcloud.io/project/overview?id=vermaldonado-ia_intelligent-logistics-control-platform
+
+---
+
+## ⚙️ Ejecución en Entorno de Desarrollo
+
+```bash
+git clone https://github.com/vermaldonado-ia/intelligent-logistics-control-platform.git
+cd intelligent-logistics-control-platform
+pip install -r requirements.txt
+PYTHONPATH=. python -m uvicorn app.api:app --reload
+```
+
+🔗 http://127.0.0.1:8000/docs
+
+---
+
+## ⚙️ Tecnologías
+
+* Python
+* FastAPI
+* Pytest
+* Flake8
+* Coverage
+* GitHub Actions
+* SonarCloud
+
+---
+
+## 📈 Valor para el negocio
+
+* ✔ Reducción de riesgos
+* ✔ Automatización
+* ✔ Mayor trazabilidad
+* ✔ Mejora operativa
+
+---
+
+## 📊 Gestión del Delivery (Azure DevOps)
+
+* ✔ Backlog estructurado
+* ✔ Historias y tareas
+* ✔ Priorización por valor
+* ✔ Kanban
+* ✔ Trazabilidad
+
+🔗 [Ver evidencia](./azure_devops/boards_evidencia.md)
+
+---
+
+## 📊 Gestión de Producto
+
+* 📄 [Product Backlog](./product_backlog.md)
+* 🚀 [Product Roadmap](./product_roadmap.md)
+* 🔗 [Evidencia](./azure_devops/product_backlog.md)
+
+---
+
+## 🚀 Próximos pasos
+
+* ✔ APIs reales
+* ✔ IA
+* ✔ Arquitectura distribuida
+* ✔ IoT
+
+---
+
+## 🎯 Valor diferencial
+
+* ✔ Diseño orientado a negocio
+* ✔ Automatización de decisiones
+* ✔ DevOps
+* ✔ Producción real
+
+👉 Representa un Delivery Manager moderno.
+
+---
+
+## 👩‍💻 Autor
+
+Verónica Maldonado Céspedes
+Cloud & DevOps Delivery Manager
