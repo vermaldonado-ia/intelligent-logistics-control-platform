@@ -179,3 +179,18 @@ La implementación de este flujo permite:
 * Estandarizar decisiones
 * Mejorar la trazabilidad
 * Aumentar la eficiencia en procesos logísticos
+
+---
+
+## 🏗️ Relación con la Arquitectura
+
+Cada etapa del flujo operacional se encuentra implementada mediante componentes específicos de la solución:
+
+- Validación documental → document_validator
+- Control de acceso → access_control
+- Evaluación de riesgo → risk_assessor
+- Orquestación de decisión → orchestrator
+- Exposición del servicio → API REST (FastAPI)
+
+👉 Ver arquitectura completa:
+- [Arquitectura de la solución](./arquitectura.md)
