@@ -114,17 +114,17 @@ Se desarrolló una API que simula un motor de decisiones inteligente, capaz de:
 
 La solución está diseñada bajo un enfoque modular, separando responsabilidades en capas:
 
-API Layer → exposición de endpoints (FastAPI)
-Orchestration Layer → lógica de decisión central
-Services Layer → reglas de negocio desacopladas
+* **API Layer** → exposición de endpoints (FastAPI)
+* **Orchestration Layer** → lógica de decisión central
+* **Services Layer** → reglas de negocio desacopladas
 
-Componentes principales:
+### 📦 Componentes principales
 
-```
+```bash
 app/
-├── api.py
-├── orchestrator.py
-└── services/
+├── api.py                # API FastAPI
+├── orchestrator.py       # Motor de decisiones
+└── services/             # Lógica de negocio
 ```
 
 👉 Este diseño permite:
@@ -133,6 +133,18 @@ app/
 * Mantenibilidad
 * Separación de responsabilidades
 * Evolución hacia microservicios
+
+---
+
+### 📊 Flujo operacional de la solución
+
+Este flujo representa cómo se orquesta la toma de decisiones operacionales dentro del sistema.
+
+```markdown
+![Flujo Operacional](diagrams/flujo_operacional_general.png)
+```
+
+![Flujo Operacional](diagrams/flujo_operacional_general.png)
 
 ---
 
