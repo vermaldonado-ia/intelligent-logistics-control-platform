@@ -30,3 +30,14 @@ def evaluate_operation(request: OperationRequest) -> Dict[str, Any]:
         return result
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc)) from exc
+
+
+@app.get("/")
+def root():
+    return {
+        "message": "Intelligent Logistics Control Platform API",
+        "status": "running",
+        "docs": "/docs",
+        "health": "/health"
+    }
+    
