@@ -154,7 +154,10 @@ No utiliza inteligencia artificial, sino lógica basada en reglas de negocio.
 
 ## 👤 Autor
 
-**Verónica Maldonado Céspedes**
-Cloud & DevOps Delivery Manager
-Project Manager | Transformación Digital
+**Verónica Maldonado Céspedes**  
+Cloud & DevOps Delivery Manager  
+Project Manager | Transformación Digital  
+
+🔗 [LinkedIn](https://www.linkedin.com/in/verónicamaldonado)  
+🔗 [GitHub](https://github.com/vermaldonado-ia)
 
