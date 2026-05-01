@@ -1,5 +1,7 @@
 # 🚀 Intelligent Logistics Control Platform
 
+Plataforma que automatiza decisiones operacionales en procesos logísticos, integrando validación documental, control de acceso a puerto y evaluación de riesgo.
+
 ![CI](https://github.com/vermaldonado-ia/intelligent-logistics-control-platform/actions/workflows/ci.yml/badge.svg)
 ![Quality Gate](https://img.shields.io/badge/Quality%20Gate-Passed-brightgreen)
 ![Coverage](https://img.shields.io/badge/Coverage-85%25-green)
@@ -9,154 +11,150 @@
 
 ## 🌐 API en Producción
 
-### 🔗 URLs principales
+🔗 **API pública**
+https://intelligent-logistics-control-platform.onrender.com
 
-- **API pública:**  
-  https://intelligent-logistics-control-platform.onrender.com
+📘 **Swagger (documentación interactiva)**
+https://intelligent-logistics-control-platform.onrender.com/docs
 
-- **Swagger / Documentación interactiva:**  
-  https://intelligent-logistics-control-platform.onrender.com/docs
-
-### ✅ Estado del despliegue
-
-- Deploy automático desde GitHub
-- API pública accesible
-- Documentación interactiva disponible
-
-> ⚠️ Nota: al estar desplegada en free tier, la API puede tardar algunos segundos en iniciar.
+⚠️ Nota: al estar desplegada en free tier, la API puede tardar algunos segundos en iniciar.
 
 ---
 
-## 🧠 Descripción
+## 🎯 Problema
 
-Plataforma que simula decisiones operacionales en procesos logísticos críticos, integrando:
+En procesos logísticos, decisiones críticas como:
 
 * Validación documental
-* Control de acceso
+* Acceso a puerto para retiro de mercancía
 * Evaluación de riesgo
-* Orquestación de decisiones
+
+dependen de procesos manuales, generando:
+
+* Riesgos operacionales
+* Errores humanos
+* Falta de trazabilidad
 
 ---
 
-## 🎯 Objetivo de Negocio
+## 💡 Solución
 
-* Reducir riesgos operacionales
-* Disminuir errores manuales
-* Mejorar tiempos de validación
-* Aumentar trazabilidad
+Se implementa un motor de decisiones que automatiza la validación de operaciones antes de su ejecución, permitiendo:
 
----
-
-## 🏗️ Arquitectura de la solución
-
-La solución fue diseñada de forma simple para representar cómo una API puede automatizar decisiones operacionales en un proceso logístico.
-
-Se compone de:
-
-- API que recibe la solicitud
-- Motor de decisión que centraliza la lógica
-- Validaciones de negocio (documentos, acceso, riesgo)
-- Resultado operacional
-
-Esta vista permite entender cómo está organizada la solución sin entrar en complejidad técnica.
+* Estandarizar decisiones
+* Reducir riesgos
+* Mejorar control operativo
 
 ---
 
 ## 🔄 Flujo Operacional
 
-La solución implementa un motor de decisiones que valida operaciones logísticas antes de su ejecución, asegurando control, seguridad y trazabilidad.
-
 📌 Diagrama del flujo:
 
 ![Flujo Operacional](./diagrams/flujo_operacional_general.png)
 
-🔍 Para ver el detalle completo del flujo y reglas de negocio:
+🔍 Detalle completo:
 
-👉 [Flujo Operacional](./docs/flujo_operacional.md)
+👉 [Ver flujo operacional](./docs/flujo_operacional.md)
+
+---
+
+## 🏗️ Arquitectura
+
+Solución implementada como una API simple con componentes separados para validación y orquestación.
+
+👉 [Ver arquitectura](./docs/arquitectura.md)
 
 ---
 
 ## 📸 Evidencia de Ejecución
 
-Resultados reales del flujo operacional:
+Resultados del sistema en distintos escenarios reales:
+
+* Documentación incompleta
+* Acceso inválido al puerto
+* Riesgo alto
+* Operación válida
 
 👉 [Ver evidencia completa](./docs/evidencia_ejecucion.md)
 
 ---
 
-## 📊 Calidad del Código
+## ⚙️ DevOps y CI/CD
 
-📄 Ver evidencia SonarCloud:
-👉 ./docs/evidencia_sonarcloud.md
+Pipeline automatizado que valida código, pruebas y calidad en cada cambio.
+
+👉 [Ver detalle CI/CD](./docs/devops_ci_cd.md)
 
 ---
 
-## ⚙️ CI/CD y DevOps
+## 🧪 Calidad de Código
 
-📄 Ver pipeline completo:
-👉 ./docs/devops_ci_cd.md
+Evaluación mediante análisis automático con SonarCloud.
+
+👉 [Ver evidencia](./docs/evidencia_sonarcloud.md)
 
 ---
 
 ## 📊 Gestión del Producto
 
-### 📄 Artefactos de producto
+El desarrollo fue gestionado bajo un enfoque de producto:
 
-- 📄 **Product Backlog**  
-  👉 [Ver backlog](./azure_devops/product_backlog.md)
+* Priorización por valor
+* Trazabilidad end-to-end
+* Gestión en Azure DevOps
 
-- 🚀 **Product Roadmap**  
-  👉 [Ver roadmap](./azure_devops/product_roadmap.md)
+📄 Artefactos:
 
-## 📂 Documentación del Producto
-
-- 📄 [Product Backlog](./docs/product_backlog.md)  
-- 🚀 [Product Roadmap](./docs/product_roadmap.md)  
-- 📊 [Gestión en Azure DevOps](./azure_devops/boards_evidencia.md)  
+* 👉 [Product Backlog](./docs/product_backlog.md)
+* 👉 [Product Roadmap](./docs/product_roadmap.md)
+* 👉 [Evidencia Azure DevOps](./azure_devops/boards_evidencia.md)
 
 ---
 
-### ⚙️ Enfoque de gestión
+## 🚀 Ejecución local
 
-- Gestión en Azure DevOps  
-- Priorización por valor  
-- Trazabilidad end-to-end  
-
----
-
-## 🚀 Ejecución Local
-
-```bash
 pip install -r requirements.txt
 python -m uvicorn app.api:app --reload
-```
 
 Swagger:
 http://127.0.0.1:8000/docs
 
 ---
 
-## 📈 Valor para el Negocio
+## 💡 Enfoque
 
-* Automatización de decisiones
-* Reducción de riesgo
-* Mejora en tiempos operacionales
-* Base para evolución a sistemas reales
+Este proyecto refleja:
 
----
+* Automatización de decisiones operacionales
+* Diseño de soluciones simples orientadas a negocio
+* Integración de prácticas DevOps
 
-## 🚀 Próximos pasos
-
-* Integración con APIs reales
-* IA para scoring de riesgo
-* Arquitectura distribuida
-* Integración IoT
+No utiliza inteligencia artificial, sino lógica basada en reglas de negocio.
 
 ---
 
-## 👩‍💻 Autor
+## 📈 Valor de Negocio
 
-**Verónica Maldonado Céspedes**  
-Cloud & DevOps Delivery Manager  
+* Reducción de riesgos operacionales
+* Disminución de errores manuales
+* Mejora en tiempos de validación
+* Base para evolución a soluciones reales
+
+---
+
+## 🔮 Próximos pasos
+
+* Integración con APIs externas
+* IA para evaluación de riesgo
+* Integración con IoT
+* Evolución arquitectónica
+
+---
+
+## 👤 Autor
+
+**Verónica Maldonado Céspedes**
+Cloud & DevOps Delivery Manager
 Project Manager | Transformación Digital
 
